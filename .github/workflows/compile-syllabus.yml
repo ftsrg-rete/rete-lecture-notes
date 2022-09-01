@@ -1,0 +1,22 @@
+on: [push]
+
+jobs:
+  compile_exercises_job:
+    runs-on: ubuntu-latest
+    name: Compile syllabus
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build PDFs with the LaTeX engine in Docker
+      uses: ftsrg/document-converter-actions@master
+    - name: Compile package
+      run: |
+        mkdir out
+        cp docs/*.{css,html,pdf} out/
+        echo "https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA" > out/README.md
+    - name: Deploy site and PDFs
+      uses: JamesIves/github-pages-deploy-action@5dc1d5a192aeb5ab5b7d5a77b7d36aea4a7f5c92  # 4.1.4
+      with:
+        branch: gh-pages
+        folder: out
+        single-commit: true
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'

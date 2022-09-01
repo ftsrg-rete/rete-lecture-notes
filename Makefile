@@ -1,0 +1,2 @@
+install:
+	./convert.sh
