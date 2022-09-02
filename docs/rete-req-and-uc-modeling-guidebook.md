@@ -5,6 +5,35 @@ header: Informatikai Rendszertervezés (BMEVIMIAC01)
 ---
 
 
+# Követelmény modellezés
+
+## Diagram létrehozás
+
+1. **Jobb katt** a kiválasztott _Package_-en (_Requirements_ ebben a példában) -> **New Diagram** -> **SysML 1.6 Use Case Diagram**.
+
+![](../figs/req-new-diag.png)
+
+2. _Requirement_ hozzáadáshoz a **Palette**-ről válasszuk ki az **Requirement**-t és helyezzük el a diagramon, majd a **Properties** ablakban a **SysML 1.6** fülön töltsük ki az _**Id**_ és a _**Text**_ mezőket. 
+
+![](../figs/req-new-req.png)
+![](../figs/req-properties.png)
+
+## Követelmények lebontása
+
+1. _Requirement_ lebontásához (_Decomposition_) a **Palette**-ről válasszuk ki a **Containment Link**-t, majd kössük össze vele a két _Requirement_-ünket. Figyeljünk a nyilak helyes irányára!
+
+![](../figs/req-containment.png)
+![](../figs/req-containment2.png)
+
+## Követelmények származtatása
+
+1. _Requirement_ származtatásához (_Derive_) a **Palette**-ről válasszuk ki a **DeriveReqt**-t, majd kössük össze vele a két _Requirement_-ünket. Figyeljünk a nyilak helyes irányára!
+
+![](../figs/req-derived-req.png)
+![](../figs/req-derived-req-2.png)
+
+
+
 # Use case Modellezés
 
 ## Diagram létrehozás
