@@ -9,7 +9,7 @@ header: Informatikai Rendszertervezés (BMEVIMIAC01)
 
 ## Diagram létrehozás
 
-1. **Jobb katt** a kiválasztott _Package_-en (_Requirements_ ebben a példában) -> **New Diagram** -> **SysML 1.6 Use Case Diagram**.
+1. **Jobb katt** a kiválasztott _Package_-en (_Requirements_ ebben a példában) -> **New Diagram** -> **SysML 1.6 Requirement Diagram**.
 
 ![](../figs/req-new-diag.png)
 
@@ -42,7 +42,7 @@ header: Informatikai Rendszertervezés (BMEVIMIAC01)
 
 ![](../figs/use-case-new-diag.png)
 
-2. **Drag-and-drop** használatával helyezzük rá a rendszer határát (_System Boundary_) reprezentáló block-ot a diagramra.
+2. **Drag-and-drop** használatával a **Model Explorer**-ből helyezzük rá a rendszer határát (_System Boundary_) reprezentáló block-ot a diagramra.
 
 ![](../figs/use-case-system-boundary.png)
 
@@ -86,3 +86,22 @@ header: Informatikai Rendszertervezés (BMEVIMIAC01)
 ![](../figs/use-case-extend.png)
 
 ![](../figs/use-case-extend-2.png)
+
+# Nyomonkövethetőség
+
+## Diagram létrehozás
+
+1. **Jobb katt** a kiválasztott _Package_-en (_Traceability_ ebben a példában) -> **New Diagram** -> **SysML 1.6 Requirement Diagram**.
+
+2. **Drag-and-drop** használatával a **Model Explorer**-ből helyezzük rá a követelményt (_Transport Cargo_) a diagramra.
+
+![](../figs/trace-req-from-me.png)
+
+3. **Drag-and-drop** használatával a **Model Explorer**-ből helyezzük rá a követelményt megvalósítós _Block_-ot (_Transportation Subsystem_) a diagramra.
+
+![](../figs/trace-block-from-me.png)
+
+4. Követelmény kielégítéséhez (_Satisfy_) a **Palette**-ről válasszuk ki a **satisfy**-t, majd kössük össze vele a két _Block_-unkat a _Requirement_-ünkkel. Figyeljünk a nyilak helyes irányára!
+
+![](../figs/trace-satisfy.png)
+![](../figs/trace-satisfy-2.png)
