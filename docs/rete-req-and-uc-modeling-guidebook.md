@@ -91,7 +91,9 @@ header: Informatikai Rendszertervezés (BMEVIMIAC01)
 
 ## Diagram létrehozás
 
-1. **Jobb katt** a kiválasztott _Package_-en (_Traceability_ ebben a példában) -> **New Diagram** -> **SysML 1.6 Requirement Diagram**.
+1. **Jobb katt** a kiválasztott _Package_-en (_Traceability_ ebben a példában) -> **New Diagram** -> **SysML 1.6 Block Definition Diagram**.
+
+![](../figs/trace-new-diag.png)
 
 2. **Drag-and-drop** használatával a **Model Explorer**-ből helyezzük rá a követelményt (_Transport Cargo_) a diagramra.
 
@@ -101,7 +103,9 @@ header: Informatikai Rendszertervezés (BMEVIMIAC01)
 
 ![](../figs/trace-block-from-me.png)
 
-4. Követelmény kielégítéséhez (_Satisfy_) a **Palette**-ről válasszuk ki a **satisfy**-t, majd kössük össze vele a két _Block_-unkat a _Requirement_-ünkkel. Figyeljünk a nyilak helyes irányára!
+4. Követelmény kielégítéséhez (_Satisfy_) a **Palette**-ről válasszuk ki a **Abstraction**-t, majd kössük össze vele a két _Block_-unkat a _Requirement_-ünkkel. Ezután a **Properties** ablakon a **Profile** fülön adjuk hozzá a **Satisfy** _Stereotype_-t. Figyeljünk rá, hogy a **Satisfy**-nak az **Applied Stereotypes** hasábban legyen, ezután okézzuk csak le.
 
 ![](../figs/trace-satisfy.png)
 ![](../figs/trace-satisfy-2.png)
+![](../figs/trace-satisfy-3.png)
+![](../figs/trace-satisfy-4.png)
