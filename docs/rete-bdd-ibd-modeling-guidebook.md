@@ -1,8 +1,14 @@
+---
+title: BDD és IBD modellezés Papyrus segédlet 
+subtitle: Informatikai Rendszertervezés (BMEVIMIAC01)
+header: Informatikai Rendszertervezés (BMEVIMIAC01)
+---
+
 # BDD
 
 Új BDD létrehozása:
 
-![](new_bdd_1.png)
+![](../figs/new_bdd_1.png)
 
 1. jobb katt a célpackage-en
 1. New Diagram
@@ -28,7 +34,7 @@ Blokk Létrehozása és beállításai:
 
 Blokkok közötti kapcsolatok felvétele:
 
-![](bdd_toolbox_relationships.png)
+![](../figs/bdd_toolbox_relationships.png)
 
 1. Toolbox -> Blocks csoport -> Association lenyitható, egybe vannak csoportosítva a különböző lehetséges asszociációk (mindig a legutóbb használt kerül a kiemelt helyre)
     - Csak az Association (Directed)-et és a Composite Association (Directed)-et használjuk ezek közül
