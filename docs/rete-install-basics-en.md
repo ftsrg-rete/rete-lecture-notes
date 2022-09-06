@@ -1,7 +1,7 @@
 ---
-title: Telepítés és Papyrus alapok segédlet 
-subtitle: Informatikai Rendszertervezés (BMEVIMIAC01)
-header: Informatikai Rendszertervezés (BMEVIMIAC01)
+title: Installing and Papyrus basics guidebook 
+subtitle: System Engineering (BMEVIMIAC01)
+header: System Engineering (BMEVIMIAC01)
 ---
 
 # Papyrus telepítése

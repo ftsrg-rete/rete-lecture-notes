@@ -1,5 +1,5 @@
 ---
-title: Követelmény and Use case modellezés Papyrus segédlet 
+title: Követelmény és Use case modellezés Papyrus segédlet 
 subtitle: Informatikai Rendszertervezés (BMEVIMIAC01)
 header: Informatikai Rendszertervezés (BMEVIMIAC01)
 ---
