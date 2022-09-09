@@ -22,3 +22,4 @@ jobs:
           branch: gh-pages
           folder: wiki
           target_folder: docs
+          single_commit: true
