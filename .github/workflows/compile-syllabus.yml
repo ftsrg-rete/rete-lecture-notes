@@ -14,9 +14,9 @@ jobs:
         cp docs/*.{css,html,pdf} out/
         echo "https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA" > out/README.md
     - name: Deploy site and PDFs
-      uses: JamesIves/github-pages-deploy-action@5dc1d5a192aeb5ab5b7d5a77b7d36aea4a7f5c92  # 4.1.4
+      uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
         branch: gh-pages
         folder: out
-        single-commit: true
+        target_folder: pandoc
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'

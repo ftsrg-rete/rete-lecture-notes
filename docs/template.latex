@@ -228,7 +228,7 @@ $endif$
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{\raisebox{-0.1\height}{\includegraphics[width=1cm]{../figs/ftsrg-logo-bw}}}
+\rhead{\raisebox{-0.1\height}{\includegraphics[width=1cm]{figs/ftsrg-logo-bw}}}
 \lhead{$header$}
 \cfoot{$if(pagenumbering)$\thepage$endif$}
 
