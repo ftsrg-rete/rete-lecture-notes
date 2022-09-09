@@ -8,7 +8,7 @@ header: Systems Engineering (BMEVIMIAC01)
 
 ## Diagram Creation
 
-![](../figs/new_bdd_1.png)
+![](figs/new_bdd_1.png)
 
 1. **Right click** on the selected _Package_ (_Requirements_ in this example) -> **New Diagram** -> **SysML 1.6 Block Definition Diagram**.
 1. In the pop-up window give a name to the diagram.
@@ -33,7 +33,7 @@ To add an _Actor_ during _System Context_ modeling:
 
 ## Relations between Blocks
 
-![](../figs/bdd_toolbox_relationships.png)
+![](figs/bdd_toolbox_relationships.png)
 
 1. Toolbox -> Blocks csoport -> Association lenyitható, egybe vannak csoportosítva a különböző lehetséges asszociációk (mindig a legutóbb használt kerül a kiemelt helyre)
     - Csak az Association (Directed)-et és a Composite Association (Directed)-et használjuk ezek közül
