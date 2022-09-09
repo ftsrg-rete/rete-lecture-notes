@@ -5,4 +5,5 @@ pandoc $1.md \
   --output=$1.html \
   --css=pandoc.css \
   --standalone \
-  --variable=numbersections
+  --variable=numbersections \
+  --extract-media=../fig
