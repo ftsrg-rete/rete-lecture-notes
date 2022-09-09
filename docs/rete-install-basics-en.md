@@ -48,6 +48,7 @@ One of the most used part of the interface is the **Model Explorer**, which show
 ## Deletion of model elements
 
 We have multiple ways of deleting model elements:
+
 - From the **Model Explorer**, where any deletion affects the entire model
 - From an **opened diagram**, where the element can either be deleted **just from the diagram** or the **entire model**. The default action bound to the **Delete** button deletes the element from the entire model, so pay attention! 
 

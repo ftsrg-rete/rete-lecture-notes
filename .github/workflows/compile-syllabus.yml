@@ -19,4 +19,5 @@ jobs:
         branch: gh-pages
         folder: out
         target_folder: pandoc
+        single_commit: true
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
