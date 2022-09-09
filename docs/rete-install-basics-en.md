@@ -4,37 +4,37 @@ subtitle: System Engineering (BMEVIMIAC01)
 header: System Engineering (BMEVIMIAC01)
 ---
 
-# Papyrus telepítése
+# Papyrus installation
 
-1. Papyrus telepítő letöltése: 
+1. Download the papyrus installer: 
     1. Linux: https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/2022-03/6.1.0/papyrus-2022-03-6.1.0-linux64.tar.gz&mirror_id=1190 
     1. Windows: https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/2022-03/6.1.0/papyrus-2022-03-6.1.0-win64.zip 
-1. Tömörítsük ki a letöltött zip-et.
-1. A _papyrus-\<version\>/Papyrus_ mappából indítsuk el a Papyrus-t
-1. Nyissuk meg az Eclipse Marketplace-t: **Help**->**Eclipse Marketplace**, majd keressünk rá a _sysml_ kiegészítőkre és telepítsük fel a **Papyrus SysML 1.6** kiegészítőt. Figyeljünk a verzióra!
+1. Extract the downloaded file.
+1. Start Papyrus from the  _papyrus-\<version\>/Papyrus_ folder
+1. Open Eclipse Marketplace: **Help**->**Eclipse Marketplace**, then search for _sysml_ and install the **Papyrus SysML 1.6** extension. Pay attention to the version number.
 
 ![](../figs/install-marketplace.png){height=48%}
 
-# Felhasználói felület
+# User Interface
 
 ## Model Explorer
-A felhasználói felület egyik leggyakrabban használt része a **Model Explorer**, ami fa szerkezetben mutatja modellünk elemeit. A tartalmazási hierarchia miatt nagy elemszámú modelleken könnyen átláthatlanná válhat, ezért az alján található kereső sokat segíthet az eligazodásban.
+One of the most used part of the interface is the **Model Explorer**, which shows the elements of our model as a containment tree. The search field helps a lot with bigger models.
 
 ![](../figs/install-model-explorer.png){height=50%}
 
-## Új project, package, diagram létrehozása
+## New project, package, diagram
 
-1. A **File** -> **New** -> **Papyrus Project** menüből válasszuk ki a **SysML 1.6** projektet
+1. From the **File** -> **New** -> **Papyrus Project** menu, choose a **SysML 1.6** project
 
 ![](../figs/install-new-project.png){height=50%}
 
-2. A **Model Explorer**-ben **Jobb katt** a modellen -> **New Child** -> **Package**
+2. In the **Model Explorer** windows, **right click** on the model -> **New Child** -> **Package**
 
 ![](../figs/install-new-package.png){height=50%}
 
-3. **Jobb katt** az elkészült _Package_-en -> **New Diagram** -> válasszuk ki a listából a feladatnak megfelelő diagramot
+3. **Right click** on the newly created _Package_ -> **New Diagram** -> choose the desired diagram type
 
-## Diagram tulajdonságai és a Palette
+## Diagram properties and the Palette
 
 ![](../figs/install-properties.png)
 
@@ -45,11 +45,11 @@ A felhasználói felület egyik leggyakrabban használt része a **Model Explore
 
 ![](../figs/install-palette-pin.png){height=40%}
 
-## Modellelemek törlése
+## Deletion of model elements
 
-Modellelemek törlésére lehetőségünk van:
-- a **Model Explorer**-ben, ahol a teljes modellből törlődik a kiválaszott elem
-- a **megnyitott diagramon** a modellelemet törölhetjük csak az adott diagramról vagy a teljes modellből, ezért figyeljünk melyiket választjuk! A **Delete** billenytű lenyomása alapértelmezetten a teljes modellből töröl! 
+We have multiple ways of deleting model elements:
+- From the **Model Explorer**, where any deletion affects the entire model
+- From an **opened diagram**, where the element can either be deleted **just from the diagram** or the **entire model**. The default action bound to the **Delete** button deletes the element from the entire model, so pay attention! 
 
 ![](../figs/install-delete-element.png){height=40%}
 
