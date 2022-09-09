@@ -6,4 +6,4 @@ pandoc $1.md \
   --css=pandoc.css \
   --standalone \
   --variable=numbersections \
-  --extract-media=../fig
+  --extract-media=../figs
