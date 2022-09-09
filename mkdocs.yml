@@ -24,9 +24,15 @@ plugins:
     - search
     - awesome-pages:
         collapse_single_pages: true
+    - glightbox:
+       width: 10vw
+       height: 10vw
 
 theme: 
     name: material
 
 extra_javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+extra_css:
+    - mkdocs.css
