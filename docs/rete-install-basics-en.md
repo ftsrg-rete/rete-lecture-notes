@@ -36,10 +36,13 @@ One of the most used part of the interface is the **Model Explorer**, which show
 
 ## Diagram properties and the Palette
 
+1. The _Properties_ of the diagram can be edited in the **Properties** window. The grid of the diagram can lower the trancparency of the diagram, feel free to try out different grids or simply hide it.
+
 ![](figs/install-properties.png)
 
 ![](figs/install-properties-grid.png)
 
+2. The **Palette** contains (most of) the model elements you can put on the diagram in different groups, some diagrams have more elements than others, you can hide element groups which are not used and pin the most used ones.
 
 ![](figs/install-palette.png)
 
@@ -53,6 +56,3 @@ We have multiple ways of deleting model elements:
 - From an **opened diagram**, where the element can either be deleted **just from the diagram** or the **entire model**. The default action bound to the **Delete** button deletes the element from the entire model, so pay attention! 
 
 ![](figs/install-delete-element.png){height=40%}
-
-# EMF Compare
-
