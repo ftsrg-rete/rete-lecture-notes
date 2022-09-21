@@ -56,3 +56,11 @@ We have multiple ways of deleting model elements:
 - From an **opened diagram**, where the element can either be deleted **just from the diagram** or the **entire model**. The default action bound to the **Delete** button deletes the element from the entire model, so pay attention! 
 
 ![](figs/install-delete-element.png){height=40%}
+
+## Exporting diagrams
+
+We recommend exporting diagrams the following way: **Right click** in the **Model Explorer** -> **Export** -> **Export all diagrams** and select **JPG** as output format. Exporting diagrams any other way may have unwanted behaviors (e.g. losing formating, missing half of the diagram, cutting down characters from the block names, etc.). Always pay attention to the quality readability of the diagrams while adding them to the documentation!
+
+![](figs/install-export-imgs.png)
+
+![](figs/install-export-jpg.png)
