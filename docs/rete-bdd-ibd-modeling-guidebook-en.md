@@ -50,8 +50,12 @@ To add an _Actor_ during _System Context_ modeling:
 1. Clicking on a _Block_ add the _Port_ to it (adds it as **Owned Property** automatically).
 1. Properties of the _Port_ can be edited in the **UML** tab of the **Properties** window.
     - The **Type** of the _Port_ (**Block** or **Interface Block**) must be created separatelly and added to the _Port_ in the **...** menu.
+        - In order to make BDDs less cluttered, the typing (interface)blocks can be omitted from the diagrams, it is enough if they exist in the model. We advise you to put them in a separate "ports" package (either one package for the whole model, or if there would be too many of them, one ports package for each subsystem package).
     - The **Provided** and **Required** interfaces field can only be edited after selecting the **Type** of the _Port_
+        - This might be the easiest way to add provided/required interfaces to the typing (interface)block of the port, as an _interface realization_ (for provided) or a _usage_ relationship has to be created for the typing block. There is no list for doing this in the typing block itself, but adding the interfaces to the port's lists automatically creates the necessary relationships in the model.
+    - **Flow properties** cannot be created directly in the diagram editor (it exists in the toolbox, but we could not drop it on any model elements from there). However, they can be added to the port's typing (interface)block in the model explorer: **right click** on the typing block -> **SysML 1.6 Child** -> **FlowProperty**. The type of the flow property (the thing that flows) can be specified in the UML tab of the properties window. It is mostly either a signal, a value type, or a block. The direction can be set in the SysML 1.6 tab. The type has to be created beforehand.
     - The **Is Conjugated** switch reverses the **Provided** and **Required** interfaces and the directions of the **Flow Properties**.
+    - On BDDs, port labels do not show anything but the name of the port even when other properties should also be shown according to the appearance settings. This is a known bug (or rather lack of feature) of Papyrus. The properties are correctly shown on IBDs though. In the homework, you do not have to worry about this, it is enough if the port name is shown and all properties are correctly set in the properties window. 
 
 # Internal Block Diagram
 
