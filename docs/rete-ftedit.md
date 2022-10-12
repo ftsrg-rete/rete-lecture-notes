@@ -30,7 +30,7 @@ The repository of the tool can be found **[here](https://github.com/ChuOkupai/FT
 
 4. To add a _Basic Event_ to a gate select the **Basic Event** from the toolbar and enter the properties window: **Right Click**->**Properties** (**Ctrl+P**). Set the name and the description of the event, then select a _distribution_ from the list or add a new one using the **+** button.
     - **Exponential** models can be used to compute the unreliability of a component with exponentially distributed failure time based on its failure rate and the mission time set when executing the analysis. 
-    - **Constant** models can be used if the probability of the event is determined outside of FTEdit (e.g. asymptotic availbility is computed using a different formula). Constant can be used for the unreliability computation of exponentials as well by setting the probability to 1-e(λt).
+    - **Constant** models can be used if the probability of the event is determined outside of FTEdit (e.g. asymptotic availbility is computed using a different formula). Constant can be used for the unreliability computation of exponentials as well by setting the probability to 1-e<sup>-λt</sup>.
 5. Select the **Exponential** or the **Constant** option -> Click on **Edit** -> Set the name of the distribution and the value .
 
 ![](figs/ftedit-basic-event-1.png)
