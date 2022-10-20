@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>BDD and IBD modeling Papyrus guidebook</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">BDD and IBD modeling Papyrus guidebook</h1>
+<p class="subtitle">Systems Engineering (BMEVIMIAC01)</p>
+</header>
+<h1 id="block-definition-diagram">Block Definition Diagram</h1>
+<h2 id="diagram-creation">Diagram Creation</h2>
+<p><img src="figs/new_bdd_1.png" /></p>
+<ol>
+<li><strong>Right click</strong> on the selected <em>Package</em> (<em>Requirements</em> in this example) -&gt; <strong>New Diagram</strong> -&gt; <strong>SysML 1.6 Block Definition Diagram</strong>.</li>
+<li>In the pop-up window give a name to the diagram.</li>
+<li><em>Hint</em>: During BDD modeling the most used groups from the <strong>Palette</strong> are the <strong>Blocks</strong> and the <strong>Ports and Flows</strong>, so pin these.</li>
+</ol>
+<h2 id="system-context">System Context</h2>
+<p>To add an <em>Actor</em> during <em>System Context</em> modeling:</p>
+<ol>
+<li>Select <em>Actor</em> from the toolbox: <strong>Palette</strong> -&gt; <strong>Blocks</strong> -&gt; <strong>Actor</strong>.</li>
+<li>Place it on the diagram.</li>
+<li>Edit the name in the <strong>Properties</strong> window.</li>
+</ol>
+<h2 id="block-creation-and-settings">Block Creation and Settings:</h2>
+<ol>
+<li>Select <em>Block</em> from the toolbox: <strong>Palette</strong> -&gt; <strong>Blocks</strong> -&gt; <strong>Block</strong>.</li>
+<li>Place it in the diagram, <em>Hint</em>: by holding the mousebutton and drawing a square the size of the block can be altered.</li>
+<li>Add a name to the <em>Block</em>. (You can always change it in the <strong>Properties</strong> window.)</li>
+<li>The <strong>Attributes</strong>,<strong>Operations</strong>,<strong>Constraints</strong> compartpents are displayed by default, these can be unnecessary, you can access the menu to hide them:
+<ul>
+<li><strong>Ctrl+F5</strong></li>
+<li><strong>Right click</strong> on the block -&gt; <strong>Filters</strong> -&gt; <strong>Show/Hide Compartments</strong></li>
+<li>You can edit these properties on multiple block simultaneously by selecting multiple blocks.</li>
+</ul></li>
+<li>You can add <em>Part/Reference/etc. properties</em> to a <em>Block</em> on the <strong>UML</strong> tab of the <strong>Properties</strong> window, in the <strong>Owned Attributes</strong> field.
+<ul>
+<li>This is most useful for properties with primitive types, as you can add <em>Ports</em> or <em>Properties typed by Blocks</em> more easily from the <strong>Palette</strong> with connections.</li>
+</ul></li>
+</ol>
+<h2 id="relations-between-blocks">Relations between Blocks</h2>
+<p><img src="figs/bdd_toolbox_relationships.png" /></p>
+<ol>
+<li>You can select from the possible <em>Associations</em> by unfolding the <strong>Palette</strong> -&gt; <strong>Blocks</strong> -&gt; <strong>Association</strong>
+<ul>
+<li>We mostly use <strong>Association (Directed)</strong> and <strong>Composite Association</strong> from these.</li>
+<li>The <strong>Association</strong> should be handled with care, define <em>Ports</em> instead of referencing another <em>Block</em> with specific type.</li>
+<li>The <strong>PartAssociation</strong> can be misleading, it does not create the proper <em>Part Property</em> in the block, use the <strong>Composite Association</strong> instead.</li>
+<li>The <strong>SharedAssociation</strong> does not have proper semantics in SysML, avoid using it.</li>
+</ul></li>
+<li>The properties of the <em>Association</em> can be edited in the <strong>Properties</strong> window, like the names of the ends of the association or the multiplicities. Be mindful which end of the association you're editing!
+<ul>
+<li>In systems engineering the source end of the association usually does not have a name, however in Papyrus a default name is assigned to this end (inherited from UML), you can delete this to make your diagram more transparent.</li>
+</ul></li>
+<li>The <strong>Generalization</strong> can be found outside of the <strong>Association</strong>: <strong>Palette</strong> -&gt; <strong>Blocks</strong> -&gt; <strong>Generalization</strong></li>
+<li><em>Containment</em> can be defined with <strong>Composite Association</strong>, do not mix it up with <strong>Containment Link</strong>!</li>
+</ol>
+<h2 id="port-creation-and-properties">Port Creation and Properties</h2>
+<ol>
+<li>Select the appropriate <em>Port</em> from <strong>Palette</strong> -&gt; <strong>Ports and Flows</strong> -&gt; <strong>Port</strong>/<strong>Full Port</strong>/<strong>Proxy Port</strong>.</li>
+<li>Clicking on a <em>Block</em> add the <em>Port</em> to it (adds it as <strong>Owned Property</strong> automatically).</li>
+<li>Properties of the <em>Port</em> can be edited in the <strong>UML</strong> tab of the <strong>Properties</strong> window.
+<ul>
+<li>The <strong>Type</strong> of the <em>Port</em> (<strong>Block</strong> or <strong>Interface Block</strong>) must be created separatelly and added to the <em>Port</em> in the <strong>...</strong> menu.
+<ul>
+<li>In order to make BDDs less cluttered, the typing (interface)blocks can be omitted from the diagrams, it is enough if they exist in the model. We advise you to put them in a separate "ports" package (either one package for the whole model, or if there would be too many of them, one ports package for each subsystem package).</li>
+</ul></li>
+<li>The <strong>Provided</strong> and <strong>Required</strong> interfaces field can only be edited after selecting the <strong>Type</strong> of the <em>Port</em>
+<ul>
+<li>This might be the easiest way to add provided/required interfaces to the typing (interface)block of the port, as an <em>interface realization</em> (for provided) or a <em>usage</em> relationship has to be created for the typing block. There is no list for doing this in the typing block itself, but adding the interfaces to the port's lists automatically creates the necessary relationships in the model.</li>
+</ul></li>
+<li><strong>Flow properties</strong> cannot be created directly in the diagram editor (it exists in the toolbox, but we could not drop it on any model elements from there). However, they can be added to the port's typing (interface)block in the model explorer: <strong>right click</strong> on the typing block -&gt; <strong>SysML 1.6 Child</strong> -&gt; <strong>FlowProperty</strong>. The type of the flow property (the thing that flows) can be specified in the UML tab of the properties window. It is mostly either a signal, a value type, or a block. The direction can be set in the SysML 1.6 tab. The type has to be created beforehand.</li>
+<li>The <strong>Is Conjugated</strong> switch reverses the <strong>Provided</strong> and <strong>Required</strong> interfaces and the directions of the <strong>Flow Properties</strong>.</li>
+<li>On BDDs, port labels do not show anything but the name of the port even when other properties should also be shown according to the appearance settings. This is a known bug (or rather lack of feature) of Papyrus. The properties are correctly shown on IBDs though. In the homework, you do not have to worry about this, it is enough if the port name is shown and all properties are correctly set in the properties window.</li>
+</ul></li>
+</ol>
+<h1 id="internal-block-diagram">Internal Block Diagram</h1>
+<h2 id="ibd-creation">IBD Creation</h2>
+<ol>
+<li>From the <strong>Model Explorer</strong> select the <em>Block</em> you want to define its connections: <strong>Right click</strong> -&gt; <strong>New Diagram</strong> -&gt; <strong>SysML 1.6 Internal Block Diagram</strong></li>
+<li><strong>Drag-and-drop</strong> the model elements contained by the <em>Block</em> to the diagram.</li>
+<li>To represent the hierarchy of the structure switch on the <strong>Internal Structure</strong>:
+<ul>
+<li><strong>Ctrl+F5</strong></li>
+<li><strong>Right click</strong> on the block -&gt; <strong>Filters</strong> -&gt; <strong>Show/Hide Compartments</strong></li>
+</ul></li>
+<li><em>Hint</em>: a model element referenced by <strong>Composite Association</strong> has solid border, a model element referenced by <strong>Association</strong> or <strong>Shared Association</strong> has dashed border</li>
+</ol>
+<h2 id="system-context-1">System Context</h2>
+<ol>
+<li>Adding <em>Information Flow</em> <strong>Palette</strong> -&gt; <strong>Ports and Flows</strong> -&gt; <strong>Item flow</strong></li>
+<li>The information can be set on the <strong>UML</strong> tab of the <strong>Properties</strong> window, however during this homework seting the name properly is sufficient.</li>
+</ol>
+<h2 id="connector-creation">Connector Creation</h2>
+<ol>
+<li><strong>Palette</strong> -&gt; <strong>Blocks</strong> -&gt; <strong>Connector</strong></li>
+<li>A <em>Connector</em> can be typed by an <em>Association</em> defined on the BDD, which can be set on the <strong>UML</strong> tab of the <strong>Properties</strong> window
+<ul>
+<li>New <em>Association</em> can be added using the <strong>+</strong> menu.</li>
+<li>Existing <em>Association</em> can be selected in the <strong>...</strong> menu.</li>
+</ul></li>
+<li><strong>Binding Connector</strong> used to express the equality of the model elements, do not mix these up!</li>
+</ol>
+<h2 id="remarks">Remarks</h2>
+<ol>
+<li>New contained of referenced <em>Blocks</em> can be added from the <strong>Palette</strong> during the <em>IBD</em> modeling, which adds new <em>Part/Reference Property</em> to the <em>BDD</em> of the <em>IBD</em>. In the modeling approach presented in this course the BDD should be modeled first, so this option should not be used.</li>
+</ol>
+</body>
+</html>

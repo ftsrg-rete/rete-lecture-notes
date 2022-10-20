@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Installing and Papyrus basics guidebook</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Installing and Papyrus basics guidebook</h1>
+<p class="subtitle">System Engineering (BMEVIMIAC01)</p>
+</header>
+<h1 id="papyrus-installation">Papyrus installation</h1>
+<ol>
+<li>Download the papyrus installer:
+<ol>
+<li>Linux: <a href="https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/2022-03/6.1.0/papyrus-2022-03-6.1.0-linux64.tar.gz&amp;mirror_id=1190">https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/2022-03/6.1.0/papyrus-2022-03-6.1.0-linux64.tar.gz&amp;mirror_id=1190</a></li>
+<li>Windows: <a href="https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/2022-03/6.1.0/papyrus-2022-03-6.1.0-win64.zip">https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/2022-03/6.1.0/papyrus-2022-03-6.1.0-win64.zip</a></li>
+</ol></li>
+<li>Extract the downloaded file.</li>
+<li>Start Papyrus from the <em>papyrus-&lt;version&gt;/Papyrus</em> folder</li>
+<li>Open Eclipse Marketplace: <strong>Help</strong>-&gt;<strong>Eclipse Marketplace</strong>, then search for <em>sysml</em> and install the <strong>Papyrus SysML 1.6</strong> extension. Pay attention to the version number.</li>
+</ol>
+<p><img src="figs/install-marketplace.png" style="height:48.0%" /></p>
+<h1 id="user-interface">User Interface</h1>
+<h2 id="model-explorer">Model Explorer</h2>
+<p>One of the most used part of the interface is the <strong>Model Explorer</strong>, which shows the elements of our model as a containment tree. The search field helps a lot with bigger models.</p>
+<p><img src="figs/install-model-explorer.png" style="height:50.0%" /></p>
+<h2 id="new-project-package-diagram">New project, package, diagram</h2>
+<ol>
+<li>From the <strong>File</strong> -&gt; <strong>New</strong> -&gt; <strong>Papyrus Project</strong> menu, choose a <strong>SysML 1.6</strong> project</li>
+</ol>
+<p><img src="figs/install-new-project.png" style="height:50.0%" /></p>
+<ol>
+<li>In the <strong>Model Explorer</strong> windows, <strong>right click</strong> on the model -&gt; <strong>New Child</strong> -&gt; <strong>Package</strong></li>
+</ol>
+<p><img src="figs/install-new-package.png" style="height:50.0%" /></p>
+<ol>
+<li><strong>Right click</strong> on the newly created <em>Package</em> -&gt; <strong>New Diagram</strong> -&gt; choose the desired diagram type</li>
+</ol>
+<h2 id="diagram-properties-and-the-palette">Diagram properties and the Palette</h2>
+<ol>
+<li>The <em>Properties</em> of the diagram can be edited in the <strong>Properties</strong> window. The grid of the diagram can lower the trancparency of the diagram, feel free to try out different grids or simply hide it.</li>
+</ol>
+<p><img src="figs/install-properties.png" /></p>
+<p><img src="figs/install-properties-grid.png" /></p>
+<ol>
+<li>The <strong>Palette</strong> contains (most of) the model elements you can put on the diagram in different groups, some diagrams have more elements than others, you can hide element groups which are not used and pin the most used ones.</li>
+</ol>
+<p><img src="figs/install-palette.png" /></p>
+<p><img src="figs/install-palette-pin.png" style="height:40.0%" /></p>
+<h2 id="deletion-of-model-elements">Deletion of model elements</h2>
+<p>We have multiple ways of deleting model elements:</p>
+<ul>
+<li>From the <strong>Model Explorer</strong>, where any deletion affects the entire model</li>
+<li>From an <strong>opened diagram</strong>, where the element can either be deleted <strong>just from the diagram</strong> or the <strong>entire model</strong>. The default action bound to the <strong>Delete</strong> button deletes the element from the entire model, so pay attention!</li>
+</ul>
+<p><img src="figs/install-delete-element.png" style="height:40.0%" /></p>
+<h2 id="exporting-diagrams">Exporting diagrams</h2>
+<p>We recommend exporting diagrams the following way: <strong>Right click</strong> in the <strong>Model Explorer</strong> -&gt; <strong>Export</strong> -&gt; <strong>Export all diagrams</strong> and select <strong>JPG</strong> as output format. Exporting diagrams any other way may have unwanted behaviors (e.g. losing formating, missing half of the diagram, cutting down characters from the block names, etc.). Always pay attention to the quality readability of the diagrams while adding them to the documentation!</p>
+<p><img src="figs/install-export-imgs.png" /></p>
+<p><img src="figs/install-export-jpg.png" /></p>
+</body>
+</html>

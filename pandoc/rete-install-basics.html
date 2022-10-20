@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Telepítés és Papyrus alapok segédlet</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Telepítés és Papyrus alapok segédlet</h1>
+<p class="subtitle">Informatikai Rendszertervezés (BMEVIMIAC01)</p>
+</header>
+<h1 id="papyrus-telepítése">Papyrus telepítése</h1>
+<ol>
+<li>Papyrus telepítő letöltése:
+<ol>
+<li>Linux: <a href="https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/2022-03/6.1.0/papyrus-2022-03-6.1.0-linux64.tar.gz&amp;mirror_id=1190" class="uri">https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/2022-03/6.1.0/papyrus-2022-03-6.1.0-linux64.tar.gz&amp;mirror_id=1190</a></li>
+<li>Windows: <a href="https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/2022-03/6.1.0/papyrus-2022-03-6.1.0-win64.zip" class="uri">https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/2022-03/6.1.0/papyrus-2022-03-6.1.0-win64.zip</a></li>
+</ol></li>
+<li>Tömörítsük ki a letöltött zip-et.</li>
+<li>A <em>papyrus-&lt;version&gt;/Papyrus</em> mappából indítsuk el a Papyrus-t</li>
+<li>Nyissuk meg az Eclipse Marketplace-t: <strong>Help</strong>-&gt;<strong>Eclipse Marketplace</strong>, majd keressünk rá a <em>sysml</em> kiegészítőkre és telepítsük fel a <strong>Papyrus SysML 1.6</strong> kiegészítőt. Figyeljünk a verzióra!</li>
+</ol>
+<p><img src="figs/install-marketplace.png" style="height:48.0%" /></p>
+<h1 id="felhasználói-felület">Felhasználói felület</h1>
+<h2 id="model-explorer">Model Explorer</h2>
+<p>A felhasználói felület egyik leggyakrabban használt része a <strong>Model Explorer</strong>, ami fa szerkezetben mutatja modellünk elemeit. A tartalmazási hierarchia miatt nagy elemszámú modelleken könnyen átláthatlanná válhat, ezért az alján található kereső sokat segíthet az eligazodásban.</p>
+<p><img src="figs/install-model-explorer.png" style="height:50.0%" /></p>
+<h2 id="új-project-package-diagram-létrehozása">Új project, package, diagram létrehozása</h2>
+<ol>
+<li>A <strong>File</strong> -&gt; <strong>New</strong> -&gt; <strong>Papyrus Project</strong> menüből válasszuk ki a <strong>SysML 1.6</strong> projektet</li>
+</ol>
+<p><img src="figs/install-new-project.png" style="height:50.0%" /></p>
+<ol>
+<li>A <strong>Model Explorer</strong>-ben <strong>Jobb katt</strong> a modellen -&gt; <strong>New Child</strong> -&gt; <strong>Package</strong></li>
+</ol>
+<p><img src="figs/install-new-package.png" style="height:50.0%" /></p>
+<ol>
+<li><strong>Jobb katt</strong> az elkészült <em>Package</em>-en -&gt; <strong>New Diagram</strong> -&gt; válasszuk ki a listából a feladatnak megfelelő diagramot</li>
+</ol>
+<h2 id="diagram-tulajdonságai-és-a-palette">Diagram tulajdonságai és a Palette</h2>
+<p><img src="figs/install-properties.png" /></p>
+<p><img src="figs/install-properties-grid.png" /></p>
+<p><img src="figs/install-palette.png" /></p>
+<p><img src="figs/install-palette-pin.png" style="height:40.0%" /></p>
+<h2 id="modellelemek-törlése">Modellelemek törlése</h2>
+<p>Modellelemek törlésére lehetőségünk van:</p>
+<ul>
+<li>a <strong>Model Explorer</strong>-ben, ahol a teljes modellből törlődik a kiválaszott elem</li>
+<li>a <strong>megnyitott diagramon</strong> a modellelemet törölhetjük csak az adott diagramról vagy a teljes modellből, ezért figyeljünk melyiket választjuk! A <strong>Delete</strong> billenytű lenyomása alapértelmezetten a teljes modellből töröl!</li>
+</ul>
+<p><img src="figs/install-delete-element.png" style="height:40.0%" /></p>
+<h1 id="emf-compare">EMF Compare</h1>
+</body>
+</html>

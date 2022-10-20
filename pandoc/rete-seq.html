@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Sequence Diagrams Papyrus guidebook</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Sequence Diagrams Papyrus guidebook</h1>
+<p class="subtitle">System Engineering (BMEVIMIAC01)</p>
+</header>
+<h1 id="diagram-creation">Diagram creation</h1>
+<p>Inside the Model Explorer windows of Papyrus, right-click the destination package, and choose <em>new diagram</em>/<em>SysML 1.6 Sequence Diagram</em>.</p>
+<p><img src="figs/seq-001-create-seq.png" /></p>
+<p>This should create the following structure in the model explorer window.</p>
+<p><img src="figs/seq-002-created-model-explorer.png" /></p>
+<p>Visually, the sequence diagram editor should look like this.</p>
+<p><img src="figs/seq-003-empty-diagram.png" /></p>
+<h1 id="structure">Structure</h1>
+<p>To add lifelines of participants (parts) to the interaction, drag and drop blocks onto the diagram area, or choose the lifeline element in the palette to the right.</p>
+<p><img src="figs/seq-004-lifeline.png" /></p>
+<p>Messages (including found &amp; lost messages) can be added via the same palette.</p>
+<p><img src="figs/seq-005-found-message.png" /></p>
+<p>To set the contents of the message, add the corresponding signal in the properties window (as a signature).</p>
+<p><img src="figs/seq-006-message-spec.png" /></p>
+<p>Execution specifications can also be added from the palette.</p>
+<p><img src="figs/seq-007-execution-spec.png" /></p>
+<p>Ensure that the execution speficiation has reasonable start and finish points (events). Here, <em>start</em> is bound to the message reception, but <em>finish</em> has no constraint.</p>
+<p><img src="figs/seq-007-execution-specification-diagram.png" /> <img src="figs/seq-008-execution-specification-prop.png" /></p>
+<p>Synchronous and asynchronous messages can be added from the palette to the diagram are between lifelines. Such messages need not contain a signal, if the semantics of the message do not require such specification (e.g., a return message does not need to specify a type). <img src="figs/seq-009-two-lifelines-message.png" /></p>
+<p>Combined fragments are a bit cumbersome to use, because they re-arrange the containment hierarchy in the model explorer every time they are moved (and thus include/exclude some elements). The type of the fragment can be selected from a drop-down in the properties window. <img src="figs/seq-010-combined-fragment.png" /></p>
+<p>The label of the combined fragment is added via simple string literals using the properties window. <img src="figs/seq-011-combined-fragment-label.png" /></p>
+<p>State invariants are added from the palette onto lifelines. <img src="figs/seq-012-state-invariant.png" /></p>
+<p>The specification of the state invariant is done through the constraint pop-up in the properties window. <img src="figs/seq-013-state-invariant-prop.png" /></p>
+<p>Instead of duration constraints (which are not supported for SysML sequence diagrams in Papyrus), we can use time constraints at specific events. Add a time constraint from the palette onto a lifeline at a message send/receive point: <img src="figs/seq-014-time-constraint-add.png" /></p>
+<p>Ensure that the constrained element is sensible (not unconstrained): <img src="figs/seq-015-time-constraint-prop.png" /></p>
+<p>To show a duration, use an initial "t[N]" label, then an offset. Here, a 10 second offset is used to specify that the duration of the execution specification is 10 seconds. Note that separate starting points are necessary for the lifelines (i.e., do not use t[0] on the second lifeline in the example). <img src="figs/seq-016-time-constraints-duration.png" /></p>
+</body>
+</html>

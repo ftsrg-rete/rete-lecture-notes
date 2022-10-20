@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>FTEdit - Fault Tree Editing tool</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">FTEdit - Fault Tree Editing tool</h1>
+<p class="subtitle">System Engineering (BMEVIMIAC01)</p>
+</header>
+<h1 id="introduction">Introduction</h1>
+<p>FTEdit is an open source fault tree editor tool for static fault trees.</p>
+<h1 id="installation">Installation</h1>
+<p>The repository of the tool can be found <strong><a href="https://github.com/ChuOkupai/FTEdit">here</a></strong>. For <strong>Linux</strong> installation follow the instructions found in the README, for <strong>Windows</strong> installation use precompiled <strong><a href="https://github.com/ChuOkupai/FTEdit/releases/tag/v1.0">binaries</a></strong>.</p>
+<h1 id="modeling-fault-trees">Modeling Fault Trees</h1>
+<ol>
+<li>You can select <strong>Gates</strong> from toolbar. <em>Top Event</em> is not an option here, so select an <em>Or Gate</em> as the root of the Fault Tree.</li>
+</ol>
+<p><img src="figs/ftedit-toolbar.png" /></p>
+<ol>
+<li>You can edit the properties of the gates in the <strong>Right Click</strong>-&gt;<strong>Properties</strong> menu or with the <strong>Ctrl+P</strong> shortcut. Use meaningful names and descriptions!</li>
+</ol>
+<p><img src="figs/ftedit-properties-1.png" /></p>
+<p><img src="figs/ftedit-properties-2.png" /></p>
+<ol>
+<li>You can add further children to gates after selecting them.</li>
+</ol>
+<p><img src="figs/ftedit-adding-children.png" /></p>
+<ol>
+<li>To add a <em>Basic Event</em> to a gate select the <strong>Basic Event</strong> from the toolbar and enter the properties window: <strong>Right Click</strong>-&gt;<strong>Properties</strong> (<strong>Ctrl+P</strong>). Set the name and the description of the event, then select a <em>distribution</em> from the list or add a new one using the <strong>+</strong> button.
+<ul>
+<li><strong>Exponential</strong> models can be used to compute the unreliability of a component with exponentially distributed failure time based on its failure rate and the mission time set when executing the analysis.</li>
+<li><strong>Constant</strong> models can be used if the probability of the event is determined outside of FTEdit (e.g. asymptotic availbility is computed using a different formula). Constant can be used for the unreliability computation of exponentials as well by setting the probability to 1-e<sup>-λt</sup>.</li>
+</ul></li>
+<li>Select the <strong>Exponential</strong> or the <strong>Constant</strong> option -&gt; Click on <strong>Edit</strong> -&gt; Set the name of the distribution and the value .</li>
+</ol>
+<p><img src="figs/ftedit-basic-event-1.png" /></p>
+<p><img src="figs/ftedit-basic-event-2.png" /></p>
+<p><img src="figs/ftedit-basic-event-3.png" /></p>
+<h1 id="evaluating-fault-trees">Evaluating Fault Trees</h1>
+<ol>
+<li><p>To evaluate a <em>Fault Tree</em> select the <em>Top Event</em> and click on the toolbar or use the <strong>Ctrl+Shift+E</strong> shortcut.</p></li>
+<li><p>Select the <strong>Use boolean algebra</strong> option and set the <strong>Mission Time</strong> and the <strong>Step</strong>.</p></li>
+<li><p>The results can be found in the <strong>Project Explorer</strong></p></li>
+</ol>
+<p><img src="figs/ftedit-evaluation-1.png" /></p>
+<p><img src="figs/ftedit-evaluation-2.png" /></p>
+<p><img src="figs/ftedit-evaluation-3.png" /></p>
+</body>
+</html>

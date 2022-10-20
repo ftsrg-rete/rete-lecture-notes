@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Requirement and Use case modeling Papyrus guidebook</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Requirement and Use case modeling Papyrus guidebook</h1>
+<p class="subtitle">Systems Engineering (BMEVIMIAC01)</p>
+</header>
+<h1 id="requirement-modeling">Requirement modeling</h1>
+<h2 id="diagram-creation">Diagram Creation</h2>
+<ol>
+<li><strong>Right click</strong> on the selected <em>Package</em> (<em>Requirements</em> in this example) -&gt; <strong>New Diagram</strong> -&gt; <strong>SysML 1.6 Requirement Diagram</strong>.</li>
+</ol>
+<p><img src="figs/req-new-diag.png" /></p>
+<ol>
+<li>To add a <em>Requirement</em> select <strong>Requirement</strong> from the <strong>Palette</strong> and place it on the diagram, then on the <strong>Properties</strong> window, in the <strong>SysML 1.6</strong> tab fill out the <strong>Id</strong> and the <strong>Text</strong> fields.</li>
+</ol>
+<p><img src="figs/req-new-req.png" /> <img src="figs/req-properties.png" /></p>
+<h2 id="requirement-decomposition">Requirement Decomposition</h2>
+<ol>
+<li>For <em>Requirement Decomposition</em> select <strong>Containment Link</strong> from the <strong>Palette</strong> and connect two <em>Requirements</em>. Pay attention to the direction of the connection!</li>
+</ol>
+<p><img src="figs/req-containment.png" /> <img src="figs/req-containment2.png" /></p>
+<h2 id="deriving-requirements">Deriving Requirements</h2>
+<ol>
+<li>To <em>Derive Requirements</em> select <strong>DeriveReqt</strong> from the <strong>Palette</strong> and connect two <em>Requirements</em>. Pay attention to the direction of the connection!</li>
+</ol>
+<p><img src="figs/req-derived-req.png" /> <img src="figs/req-derived-req-2.png" /></p>
+<h1 id="use-case-modeling">Use Case modeling</h1>
+<h2 id="diagram-creation-1">Diagram Creation</h2>
+<ol>
+<li><strong>Right click</strong> on the selected <em>Package</em> (<em>UseCases</em> in this example) -&gt; <strong>New Diagram</strong> -&gt; <strong>SysML 1.6 Use Case Diagram</strong>.</li>
+</ol>
+<p><img src="figs/use-case-new-diag.png" /></p>
+<ol>
+<li><strong>Drag-and-drop</strong> a block representing the boundry of the system (<em>System Boundary</em>) from the <strong>Model Explorer</strong> to the diagram.</li>
+</ol>
+<p><img src="figs/use-case-system-boundary.png" /></p>
+<h2 id="adding-actors-and-use-cases">Adding Actors and Use Cases</h2>
+<ol>
+<li>To add an <em>Actor</em> select <strong>Actor</strong> from the <strong>Palette</strong> and place it on the diagram.</li>
+</ol>
+<p><img src="figs/use-case-new-actor.png" /></p>
+<ol>
+<li>To add a <em>Use Case</em> select <strong>Use Case</strong> from the <strong>Palette</strong> and place it on the diagram.</li>
+</ol>
+<p><img src="figs/use-case-new-uc.png" /></p>
+<ol>
+<li>To add an <em>Association</em> between the <em>Actor</em> and the <em>Use Case</em> select <strong>Communication Path</strong> from the <strong>Palette</strong> and connect the <em>Actor</em> and the <em>Use Case</em>.</li>
+</ol>
+<p><img src="figs/use-case-actor-uc-assoc.png" /></p>
+<p><img src="figs/use-case-actor-uc-assoc-2.png" /></p>
+<h2 id="relations-between-actors">Relations between Actors</h2>
+<ol>
+<li>To <em>Generalize</em> <em>Actors</em> select <strong>Generalization</strong> from the <strong>Palette</strong> and connect two <em>Actors</em>. Pay attention to the direction of the connection!</li>
+</ol>
+<p><img src="figs/use-case-generalization.png" /></p>
+<p><img src="figs/use-case-generalization-2.png" /></p>
+<h2 id="relations-between-use-cases">Relations between Use Cases</h2>
+<ol>
+<li>To <em>Generalize</em> <em>Use Cases</em> select <strong>Generalization</strong> from the <strong>Palette</strong> and connect two <em>Use Cases</em>. Pay attention to the direction of the connection!</li>
+</ol>
+<p><img src="figs/use-case-generalization-3.png" /></p>
+<ol>
+<li>To <em>Refine</em> a <em>Use Case</em> select <strong>Include</strong> from the <strong>Palette</strong> and connect two <em>Use Cases</em>. Pay attention to the direction of the connection!</li>
+</ol>
+<p><img src="figs/use-case-include.png" /></p>
+<p><img src="figs/use-case-include-2.png" /></p>
+<ol>
+<li>To <em>Extend</em> a <em>Use Case</em> select <strong>Extend</strong> from the <strong>Palette</strong> and connect two <em>Use Cases</em>. Pay attention to the direction of the connection!</li>
+</ol>
+<p><img src="figs/use-case-extend.png" /></p>
+<p><img src="figs/use-case-extend-2.png" /></p>
+<h1 id="traceability">Traceability</h1>
+<h2 id="diagram-creation-2">Diagram Creation</h2>
+<ol>
+<li><strong>Right click</strong> on the selected <em>Package</em> (<em>UseCases</em> in this example) -&gt; <strong>New Diagram</strong> -&gt; <strong>SysML 1.6 Block Definition Diagram</strong>.</li>
+</ol>
+<p><img src="figs/trace-new-diag.png" /></p>
+<ol>
+<li><strong>Drag-and-drop</strong> the <em>Requirement</em> (<em>Transport Cargo</em>) from the <strong>Model Explorer</strong> to the diagram.</li>
+</ol>
+<p><img src="figs/trace-req-from-me.png" /></p>
+<ol>
+<li><strong>Drag-and-drop</strong> the <em>Block</em> satisfying the <em>Requirement</em> (<em>Transportation Subsystem</em>) from the <strong>Model Explorer</strong> to the diagram.</li>
+</ol>
+<p><img src="figs/trace-block-from-me.png" /></p>
+<ol>
+<li>To <em>Satisfy</em> the <em>Requirement</em> select <strong>Abstraction</strong> from the <strong>Palette</strong> and connect the <em>Block</em> to the <em>Requirement</em>. Than on the <strong>Properties</strong> window, on the <strong>Profile</strong> tab add the <strong>Satisfy</strong> <em>Stereotype</em>-t. The <strong>Satisfy</strong> <em>Stereotype</em> must be in the <strong>Applied Stereotypes</strong> column!</li>
+</ol>
+<p><img src="figs/trace-satisfy.png" /> <img src="figs/trace-satisfy-2.png" /> <img src="figs/trace-satisfy-3.png" /> <img src="figs/trace-satisfy-4.png" /></p>
+</body>
+</html>

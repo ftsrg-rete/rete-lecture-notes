@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Activity Diagrams Papyrus guidebook</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Activity Diagrams Papyrus guidebook</h1>
+<p class="subtitle">System Engineering (BMEVIMIAC01)</p>
+</header>
+<h1 id="diagram-creation">Diagram creation</h1>
+<p>Inside the Model Explorer windows of Papyrus, right-click the destination package, and choose <em>new diagram</em>/<em>SysML 1.6 Activity Diagram</em>.</p>
+<p><img src="figs/001-new-diagram.png" /></p>
+<p>To rename the diagram, enter some name in the pop-up windows.</p>
+<p><img src="figs/002-diagram-name.png" /></p>
+<p>If everything worked, Papyrus should be showing an empty Activity inside the newly created diagram. Note that as always, Papyrus does not show a diagram header or a diagram frame, which contradicts the SysML standard. Instead, we can think of the activity's boundary as the diagram frame.</p>
+<p><img src="figs/003-empty-diagram.png" /></p>
+<h1 id="creating-a-simple-diagram">Creating a simple diagram</h1>
+<p>From the palette to the right, grab an <em>initial</em> and an <em>activity final</em> element, and drop them on inside the main activity's frame. Furthermore, pick <em>control flow</em> from the palette, and connect the two elements. The resulting diagram should look like this:</p>
+<p><img src="figs/004-basic-diagram.png" /></p>
+<p>And in the model explorer, the following new elements should be visible (also, you can rename the top-level activity to something more sensible):</p>
+<p><img src="figs/005-model-explorer.png" /></p>
+<h1 id="adding-actions">Adding actions</h1>
+<p>To add an <em>opaque action</em> (i.e., one without a defined inner structure), right-click the top-level activity in the model explorer, and choose <em>Opaque Action</em> from the <em>UML for SysML 1.6</em> submenu of the context menu. Note that you can duplicate elements in the model explorer using ctrl+c and ctrl+v, so keep a "template" opaque action available to avoid having to always select the element from the complicated menu structure.</p>
+<p><img src="figs/006-opaque-action.png" /></p>
+<p>Then, drop the newly create opaque action onto the diagram, break up the connection between the initial and activity final nodes, and insert the opaque action in-between. Even though Papyrus always offers the possibility to add a label to an edge, refrain from using this feature, because diagrams get very complex very fast.</p>
+<p><img src="figs/007-basic-diagram-2.png" /></p>
+<p>An alternative to the solution for adding an opaque action above, is to start drawing an edge from a node, and Papyrus will offer to create a new element. Choose an opaque action here.</p>
+<p><img src="figs/008-opaque-action-2.png" /></p>
+<h1 id="adding-pins">Adding pins</h1>
+<p>So far, all edges have been control-flow edges. To add object flow as well, we need to define output and input pins on actions (possibly including the top-level activity). To do so, drop an output pin from the palette onto the opaque action created in the previous step. Then, create (in the model explorer) a signal, and add that as the type of the pin. Do not leave pins untyped!</p>
+<p><img src="figs/009-output-pin.png" /></p>
+<p>Do the same process with an input pin on another opaque action. You can find the input pin under the output pin's drop-down menu.</p>
+<p><img src="figs/010-input-pin.png" /></p>
+<p>So far, the diagram should like something like this:</p>
+<p><img src="figs/011-basic-diagram-3.png" /></p>
+<p>To connect the two pins, draw an <em>object flow</em> from the palette between them. Notice that even though SysML defines different graphical syntax for the control- and object-flow edges, Papyrus shows them both using the same notation -- be sure which type you use. The diagram will look like this after the connection will have been established:</p>
+<p><img src="figs/012-basic-diagram-3-connected.png" /></p>
+<h1 id="adding-signal-related-actions">Adding signal-related actions</h1>
+<p>So far, the object flow represented a direct and synchronous communication channel. In SysML, there is an alternative to this: sending and receiving signals. You can find these elements under the <em>Send Signal Action</em> element's drop-down menu in the palette.</p>
+<p><img src="figs/013-send-accept-action.png" /></p>
+<p>If you add a <em>send signal action</em> to the diagram, Papyrus prompts you to select which signal to send, or allows you to create one. Choose the previously created signal.</p>
+<p><img src="figs/014-send-signal-action-creation.png" /></p>
+<p>Adding a signal type to an <em>accept event action</em> is a bit more complicated, because an <em>event</em> is much more than a <em>signal</em>. So, when you create an <em>accept event action</em>, it does not prompt you to choose a signal, but rather lets you define a <em>trigger</em> in its properties window.</p>
+<p><img src="figs/015-accept-signal-action.png" /></p>
+<p>As we want to catch signals, choose the <em>SignalEvent</em> option from the Add Event drop-down.</p>
+<p><img src="figs/016-accept-trigger-creation.png" /></p>
+<p>First, choose under which element to create the trigger (the most straightforward option is to choose a package).</p>
+<p><img src="figs/018-signal-event-creation.png" /></p>
+<p>Add a name for the new SignalEvent, and choose the corresponding Signal (the one picked out when creating the <em>send event action</em>).</p>
+<p><img src="figs/019-signal-event-creation-2.png" /></p>
+<p>If everything went well, the new trigger should look like this.</p>
+<p><img src="figs/020-success-signal-trigger.png" /></p>
+<p>These actions above should result in the following diagram. Note that the pins on the send/receive actions are properly typed using the signal.</p>
+<p><img src="figs/021-async-diagram.png" /></p>
+<p>To connect the elements, create object flows again.</p>
+<p><img src="figs/022-async-diagram-connected.png" /></p>
+<h1 id="interruptible-regions">Interruptible Regions</h1>
+<p>Unfortunately, Papyrus has a <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=521614">bug</a> where an InterruptibleActivityRegion cannot have children. Instead, we can use an Activity from the palette (which would be used to model embedded behavior) and simply name it <em>InterruptibleActivityRegion</em>. We can do the same with an interrupting edge: adding a label asserting its type.</p>
+<p><img src="figs/023-interruptible-region-edge.png" /></p>
+<h1 id="time-event-creation">Time event creation</h1>
+<p>To let something cancel the <em>accept event action</em> added in the previous steps, let's add a timeout event to the interruptible activity region, which will cancel the wait after some time.</p>
+<p>Do the same as before by adding an <em>accept event action</em>, but choose <em>TimeEvent</em> from the dropdown on its trigger.</p>
+<p><img src="figs/024-time-event-creation.png" /></p>
+<p>Choose the container (a package, as before).</p>
+<p><img src="figs/025-time-event-creation-2.png" /></p>
+<p>You have two choices (do not do both):</p>
+<ol>
+<li>Name the time expression using the required timing (e.g., "60 s"); or</li>
+<li>choose a literal from the Expr drop-down, and document its unit of measurement (seconds) somewhere, e.g., as a note.</li>
+</ol>
+<p><img src="figs/026-time-event-creation-3.png" /></p>
+<p>Name the time event something sensible, and click OK. Pay attention to the "Is Relative" radiobuttons, because this determines whether the time action should be counted from the beginning of model execution (false), or the beginning of node activation (true).</p>
+<p><img src="figs/027-time-event-creation-4.png" /></p>
+<p>This has created an accept event action that waits for some timeout event. However, we cannot see this on the diagram.</p>
+<p><img src="figs/028-time-event-creation-success.png" /></p>
+<p>Even though the previous steps more or less correctly created the timing actions, they do not appear on the diagram. The alternative (and much easier) way is to create an empty TimeEvent trigger, and just use the name of the accept event action to assert the time event's value:</p>
+<p><img src="figs/029-alternative-time-event.png" /></p>
+<p>Depending on the relative-ness of the timeout event, you can use "after:</p>
+<p><img src="figs/030-after-time-event.png" /></p>
+<p>or "at":</p>
+<p><img src="figs/031-at-time-event.png" /></p>
+<p>All this together should look like this on the diagram:</p>
+<p><img src="figs/032-so-far.png" /></p>
+<p>What's still missing, is the activation of the interruptible activity region, for which we can use a fork from the initial node:</p>
+<p><img src="figs/033-join.png" /></p>
+<p>and also a way for the timeout event to interrupt the interruptible activity region:</p>
+<p><img src="figs/034-final.png" /></p>
+<p>Notice that a merge node was more suitable for the task (rather than a join), because we want to exit the activity if <em>one</em> of the two inputs become active.</p>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Követelmény és Use case modellezés Papyrus segédlet</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Követelmény és Use case modellezés Papyrus segédlet</h1>
+<p class="subtitle">Informatikai Rendszertervezés (BMEVIMIAC01)</p>
+</header>
+<h1 id="követelmény-modellezés">Követelmény modellezés</h1>
+<h2 id="diagram-létrehozás">Diagram létrehozás</h2>
+<ol>
+<li><strong>Jobb katt</strong> a kiválasztott <em>Package</em>-en (<em>Requirements</em> ebben a példában) -&gt; <strong>New Diagram</strong> -&gt; <strong>SysML 1.6 Requirement Diagram</strong>.</li>
+</ol>
+<p><img src="figs/req-new-diag.png" /></p>
+<ol>
+<li><em>Requirement</em> hozzáadáshoz a <strong>Palette</strong>-ről válasszuk ki az <strong>Requirement</strong>-t és helyezzük el a diagramon, majd a <strong>Properties</strong> ablakban a <strong>SysML 1.6</strong> fülön töltsük ki az <em><strong>Id</strong></em> és a <em><strong>Text</strong></em> mezőket.</li>
+</ol>
+<p><img src="figs/req-new-req.png" /> <img src="figs/req-properties.png" /></p>
+<h2 id="követelmények-lebontása">Követelmények lebontása</h2>
+<ol>
+<li><em>Requirement</em> lebontásához (<em>Decomposition</em>) a <strong>Palette</strong>-ről válasszuk ki a <strong>Containment Link</strong>-t, majd kössük össze vele a két <em>Requirement</em>-ünket. Figyeljünk a nyilak helyes irányára!</li>
+</ol>
+<p><img src="figs/req-containment.png" /> <img src="figs/req-containment2.png" /></p>
+<h2 id="követelmények-származtatása">Követelmények származtatása</h2>
+<ol>
+<li><em>Requirement</em> származtatásához (<em>Derive</em>) a <strong>Palette</strong>-ről válasszuk ki a <strong>DeriveReqt</strong>-t, majd kössük össze vele a két <em>Requirement</em>-ünket. Figyeljünk a nyilak helyes irányára!</li>
+</ol>
+<p><img src="figs/req-derived-req.png" /> <img src="figs/req-derived-req-2.png" /></p>
+<h1 id="use-case-modellezés">Use case Modellezés</h1>
+<h2 id="diagram-létrehozás-1">Diagram létrehozás</h2>
+<ol>
+<li><strong>Jobb katt</strong> a kiválasztott <em>Package</em>-en (<em>UseCases</em> ebben a példában) -&gt; <strong>New Diagram</strong> -&gt; <strong>SysML 1.6 Use Case Diagram</strong>.</li>
+</ol>
+<p><img src="figs/use-case-new-diag.png" /></p>
+<ol>
+<li><strong>Drag-and-drop</strong> használatával a <strong>Model Explorer</strong>-ből helyezzük rá a rendszer határát (<em>System Boundary</em>) reprezentáló block-ot a diagramra.</li>
+</ol>
+<p><img src="figs/use-case-system-boundary.png" /></p>
+<h2 id="actorok-és-use-case-ek-felvétele">Actorok és Use Case-ek felvétele</h2>
+<ol>
+<li><em>Actor</em> hozzáadáshoz a <strong>Palette</strong>-ről válasszuk ki az <strong>Actor</strong>-t és helyezzük el a diagramon.</li>
+</ol>
+<p><img src="figs/use-case-new-actor.png" /></p>
+<ol>
+<li><em>Use Case</em> hozzáadáshoz a <strong>Palette</strong>-ről válasszuk ki az <strong>Use Case</strong>-t és helyezzük el a diagramon.</li>
+</ol>
+<p><img src="figs/use-case-new-uc.png" /></p>
+<ol>
+<li><em>Asszociáció</em> (<em>Association</em>) felvételéhez a <strong>Palette</strong>-ről válasszuk ki a <strong>Communication Path</strong>-t, majd kössük össze vele az <em>Actor</em>-t és a <em>Use Case</em>-t.</li>
+</ol>
+<p><img src="figs/use-case-actor-uc-assoc.png" /></p>
+<p><img src="figs/use-case-actor-uc-assoc-2.png" /></p>
+<h2 id="actorok-közötti-kapcsolatok-felvétele">Actorok közötti kapcsolatok felvétele</h2>
+<ol>
+<li>Leszármazás (<em>Generalization</em>) felvételéhez a <strong>Palette</strong>-ről válasszuk ki a <strong>Generalization</strong>-t, majd kössük össze vele a két <em>Actor</em>-unkat.</li>
+</ol>
+<p><img src="figs/use-case-generalization.png" /></p>
+<p><img src="figs/use-case-generalization-2.png" /></p>
+<h2 id="use-case-ek-közötti-kapcsolatok-felvétele">Use Case-ek közötti kapcsolatok felvétele</h2>
+<ol>
+<li>Leszármazás (<em>Generalization</em>) felvételéhez a <strong>Palette</strong>-ről válasszuk ki a <strong>Generalization</strong>-t, majd kössük össze vele a két <em>Use Case</em>-ünket.</li>
+</ol>
+<p><img src="figs/use-case-generalization-3.png" /></p>
+<ol>
+<li><em>Use Case</em> finomításához (<em>Refinement</em>) a <strong>Palette</strong>-ről válasszuk ki a <strong>Include</strong>-t, majd kössük össze vele a két <em>Use Case</em>-ünket. Figyeljünk a nyilak helyes irányára!</li>
+</ol>
+<p><img src="figs/use-case-include.png" /></p>
+<p><img src="figs/use-case-include-2.png" /></p>
+<ol>
+<li><em>Use Case</em> bővítéséhez (<em>Extension</em>) a <strong>Palette</strong>-ről válasszuk ki a <strong>Extend</strong>-t, majd kössük össze vele a két <em>Use Case</em>-ünket. Figyeljünk a nyilak helyes irányára!</li>
+</ol>
+<p><img src="figs/use-case-extend.png" /></p>
+<p><img src="figs/use-case-extend-2.png" /></p>
+<h1 id="nyomonkövethetőség">Nyomonkövethetőség</h1>
+<h2 id="diagram-létrehozás-2">Diagram létrehozás</h2>
+<ol>
+<li><strong>Jobb katt</strong> a kiválasztott <em>Package</em>-en (<em>Traceability</em> ebben a példában) -&gt; <strong>New Diagram</strong> -&gt; <strong>SysML 1.6 Block Definition Diagram</strong>.</li>
+</ol>
+<p><img src="figs/trace-new-diag.png" /></p>
+<ol>
+<li><strong>Drag-and-drop</strong> használatával a <strong>Model Explorer</strong>-ből helyezzük rá a követelményt (<em>Transport Cargo</em>) a diagramra.</li>
+</ol>
+<p><img src="figs/trace-req-from-me.png" /></p>
+<ol>
+<li><strong>Drag-and-drop</strong> használatával a <strong>Model Explorer</strong>-ből helyezzük rá a követelményt megvalósítós <em>Block</em>-ot (<em>Transportation Subsystem</em>) a diagramra.</li>
+</ol>
+<p><img src="figs/trace-block-from-me.png" /></p>
+<ol>
+<li>Követelmény kielégítéséhez (<em>Satisfy</em>) a <strong>Palette</strong>-ről válasszuk ki a <strong>Abstraction</strong>-t, majd kössük össze vele a két <em>Block</em>-unkat a <em>Requirement</em>-ünkkel. Ezután a <strong>Properties</strong> ablakon a <strong>Profile</strong> fülön adjuk hozzá a <strong>Satisfy</strong> <em>Stereotype</em>-t. Figyeljünk rá, hogy a <strong>Satisfy</strong>-nak az <strong>Applied Stereotypes</strong> hasábban legyen, ezután okézzuk csak le.</li>
+</ol>
+<p><img src="figs/trace-satisfy.png" /> <img src="figs/trace-satisfy-2.png" /> <img src="figs/trace-satisfy-3.png" /> <img src="figs/trace-satisfy-4.png" /></p>
+</body>
+</html>

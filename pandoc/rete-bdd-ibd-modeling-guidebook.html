@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>BDD és IBD modellezés Papyrus segédlet</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">BDD és IBD modellezés Papyrus segédlet</h1>
+<p class="subtitle">Informatikai Rendszertervezés (BMEVIMIAC01)</p>
+</header>
+<h1 id="bdd">BDD</h1>
+<p>Új BDD létrehozása:</p>
+<p><img src="figs/new_bdd_1.png" /></p>
+<ol>
+<li>jobb katt a célpackage-en</li>
+<li>New Diagram</li>
+<li>SysML 1.6 Block Definition Diagram</li>
+<li>A felugró ablakban megadható a diagram neve</li>
+<li><em>Tipp</em>: A BDD editor toolbox két leginkább használt csoportja a Blocks és a Ports and Flows, ezeket érdemes kinyitni és pinelni</li>
+</ol>
+<p>Actor létrehozása (System Contexthez):</p>
+<ol>
+<li>Toolbox -&gt; Blocks csoport -&gt; Actor</li>
+<li>A diagramterületen kattintva létrejön</li>
+<li>A neve a Properties ablakban állítható</li>
+</ol>
+<p>Blokk Létrehozása és beállításai:</p>
+<ol>
+<li>Toolbox -&gt; Blocks csoport -&gt; Block</li>
+<li>Kattintással default méretű, az egérgombot lenyomva tartva téglalap rajzolásával tetszőleges méretű blokk hozható létre</li>
+<li>Ez után megadható a blokk neve; módosítani később a nevet csak a properties panelen lehet</li>
+<li>A blokk compartmentjei közül automatikusan megjelenik az Attributes, az Operations és a constraints; ezek gyakran feleslegesek, megjelenítésük állítható:
+<ul>
+<li>Ctrl-F5 vagy</li>
+<li>blokkon jobb katt -&gt; Filters -&gt; Show/Hide Compartments</li>
+<li>több blokkot egyszerre kijelölve egyszerre is állíthatóak, nem kell egyesével</li>
+</ul></li>
+<li>A blokkhoz új (SysML értelmű, az az part/reference/etc.) property a Properties ablak UML fülén az Owned Attributes részen adható hozzá a jobb oldali + jelre kattintva, és a - jellel távolítható el
+<ul>
+<li>ennek leginkább a primitív típusú property-knél van haszna, mivel mind port, mind blokkal típusozott property könnyebben adható hozzá a toolbox és kapcsolatok segítségével</li>
+</ul></li>
+</ol>
+<p>Blokkok közötti kapcsolatok felvétele:</p>
+<p><img src="figs/bdd_toolbox_relationships.png" /></p>
+<ol>
+<li>Toolbox -&gt; Blocks csoport -&gt; Association lenyitható, egybe vannak csoportosítva a különböző lehetséges asszociációk (mindig a legutóbb használt kerül a kiemelt helyre)
+<ul>
+<li>Csak az Association (Directed)-et és a Composite Association (Directed)-et használjuk ezek közül</li>
+<li>A sima Associationnel vigyázva kell bánni: nagyon ritkán akarjuk meghatározni a pontos típusát egy hivatkozott (nem tartalmazott) másik elemnek ahelyett, hogy porton keresztül kommunikálnánk, csak az interfészt specifikálva</li>
+<li>A PartAssociation megtévesztő, part property-t Composite Associationnel érdemes felvenni, mert a Part Associationnel nem jön létre az alap beállításokkal a megfelelő property a blokkban</li>
+</ul></li>
+<li>A diagramon a kapcsolatot kijelölve a Properties ablakban állíthatóak annak tulajdonságai, amiből legfontosabbak az egyes oldalak neve és multiplicitása. Vigyázni kell, hogy megfelelő oldal tulajdonságait állítsuk! A kapcsolat kiinduló oldalát rendszertervezésben általában nem hasznos elnevezni, a papyrus mégis (UML-ből örökölve) ezt megteszi - a név törölhető, hogy ne zavarjon a diagramon.
+<ul>
+<li>a blokkba kerülő Property neve és multiplicitása automatikusan állítódik a kapcsolatvég tulajdonságainak állításával, ez ellenőrizhető a kiindulási oldal blokkjának Owned attributes listájában</li>
+</ul></li>
+<li>A Generalization kapcsolat külön található meg a Blocks csoportban</li>
+</ol>
+<p>A tartalmazást Composite Association írja le, nem keverendő össze a Containment Linkkel, ami szintén megtalálható a toolboxban!</p>
+<p>Portok létrehozása és tulajdonságai:</p>
+<ol>
+<li>Toolbox -&gt; Ports and Flows csoport -&gt; Port/Full Port/Proxy Port kiválasztása</li>
+<li>Egy meglévő blokkra kattintva a kiválasztott fajtájú port létrejön a blokkon (owned attributes listához automatikusan hozzáadva)</li>
+<li>A portot kiválasztva annak minden tulajdonsága a Properties ablak UML fülén állítható.
+<ul>
+<li>A Type melletti + jelnél sajnos a SysML portok típusozására használható Block és Interface Block nincsenek a lehetőségek listáján, így a típust adó Blockot vagy Interface Blockot külön létre kell hozni, és a Type melleti ...-al kikeresni</li>
+<li>A Provided és Required (interface) listákhoz csak a Type megadása után adható hozzá új elem</li>
+<li>Ezeken kívül az Is Conjugated kapcsoló fontos beállítás még: egy konjugált port típusa "megfordul", azaz minden eredetileg Provided interface-ből Required lesz és fordítva, és a befelé irányú Flow property-kből kifelé irányú lesz, és fordítva</li>
+</ul></li>
+</ol>
+<p>IBD létrehozása és tartalmazott blokkok megjelenítése:</p>
+<ol>
+<li>Model explorer -&gt; Jobb katt azon a blokkon, aminek a belsejét le fogja írni az IBD -&gt; New Diagram -&gt; SysML 1.6 Internal Block Diagram; a felugró ablakban megadható a diagram neve</li>
+<li>A blokk által tartalmazott elemek a diagramra húzhatók a model explorerből</li>
+<li>Többszintű struktúra ábrázolásához az IBD-n lévő blokkokban az Internal Structure compartment megjelenítése szükséges
+<ul>
+<li>Kijelölve a blokkot az IBD-n Ctrl-F5 vagy</li>
+<li>Jobb katt -&gt; Filters -&gt; Show/Hide Compartments</li>
+</ul></li>
+</ol>
+<p>Ha egy Composite Associationön keresztül (azaz Part Propertyként) tartalmazott modellelem kerül fel a diagramra, annak kerete folytonos vonal. Ha sima vagy shared associationön keresztül (azaz Reference Propertyként) hivatkozott elem kerül fel, annak kerete szaggatott vonal. Ha tehát egy elem kerete szaggatott, vigyázni kell, hogy valóban csak hivatkozást akarunk-e, vagy lemaradt a tartalmazás / rossz helyről húztuk be az elemet a model explorerből.</p>
+<p><em>Tipp</em>: A papyrus az IBD egyes blokkjait csúszkával jeleníti meg, ha túl nagy a belső struktúra leírása. Ezeket <em>nem</em> érdemes mozgatni, mert a több egymásba ágyazott csúszka mozgatása elég furcsán tud bánni a több szinten átnyúló connectorokkal, inkább a blokkok méretének növelése, és csak az IBD legkülső csúszkájának a használata javasolt.</p>
+<p>Information flow létrehozása (System contexthez):</p>
+<ol>
+<li>Toolbox -&gt; Ports and Flows csoport -&gt; Item flow</li>
+<li>Az átadott információ a Properties ablak UML fülén a Conveyed listában adható meg, azonban a házi feladatban egyszerűen a névben is elég megadni az információt</li>
+</ol>
+<p>Connectorok létrehozása:</p>
+<ol>
+<li>Toolbox -&gt; Blocks csoport -&gt; Connector</li>
+<li>SysML-ben egy connector típusa a BDD-n megadott asszociáció lehet, ezt a Properties ablakban az UML fülön a Type beállításával lehet kiválasztani. A + jellel új asszociáció adható hozzá, a ...-al pedig a meglévőkből lehet választani.</li>
+</ol>
+<p>A Connector és a Binding Connector nem összekeverendő! Binding Connector két elem azonosságát jelenti, nem köztük lévő kapcsolatot - az használható például annak megadására, hogy egy Reference Property az IBD által leírt elrendezésben milyen konkrét block use-ra hivatkozik.</p>
+<p>Új tartalmazott blokk vagy referencia hozzáadható a toolbox Block csoportjából. A felugró ablakban ekkor ki kell választani, hogy az új part/reference property típusa is új lesz-e (ekkor meg kell adnunk a nevét), vagy pedig egy meglévő modellelem (ekkor ki kell választani azt). Fontos, hogy ez új part/reference property-t ad hozzá az IBD kontextusául szolgáló blokkhoz, amit korábban nem vettünk fel a BDD-n. A tárgyban bemutatott modellezési megközelítésben előszöt a BDD készül el egészében, így ennek a lehetőségnek a használatára nincs szükség a házi feladatban.</p>
+</body>
+</html>
