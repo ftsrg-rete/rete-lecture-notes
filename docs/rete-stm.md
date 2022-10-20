@@ -44,6 +44,10 @@ To add behavior to the state machine, we can define _triggers_, _guards_ and _ac
 
 ![](figs/stm-009-add-trigger.png)
 
+To specify which port the trigger signal might arrive, use the properties window:
+
+![](figs/stm-009-trigger-port.png)
+
 Visually, a trigger will appear as a label on the diagram.
 
 ![](figs/stm-010-trigger-visalized.png)
