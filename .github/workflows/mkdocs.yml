@@ -18,6 +18,15 @@ jobs:
       - run: mkdocs build --site-dir wiki
         working-directory: .
       - uses: JamesIves/github-pages-deploy-action@3.7.1
+        id: deploy1
+        with:
+          branch: gh-pages
+          folder: wiki
+          target_folder: docs
+          single_commit: true
+          clean-exclude: papyrus
+      - uses: JamesIves/github-pages-deploy-action@3.7.1
+        if: steps.deploy1.conclusion == 'failure'
         with:
           branch: gh-pages
           folder: wiki

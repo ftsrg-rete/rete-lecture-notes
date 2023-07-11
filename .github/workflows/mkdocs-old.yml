@@ -21,8 +21,16 @@ jobs:
       - run: mkdocs build --site-dir wiki
         working-directory: .
       - uses: JamesIves/github-pages-deploy-action@3.7.1
+        id: deploy1
         with:
           branch: gh-pages
-          folder: wiki
+          folder: old/wiki
+          target_folder: docs/papyrus
+          single_commit: true
+      - uses: JamesIves/github-pages-deploy-action@3.7.1
+        if: steps.deploy1.conclusion == 'failure'
+        with:
+          branch: gh-pages
+          folder: old/wiki
           target_folder: docs/papyrus
           single_commit: true
