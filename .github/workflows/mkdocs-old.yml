@@ -24,5 +24,5 @@ jobs:
         with:
           branch: gh-pages
           folder: wiki
-          target_folder: docs-old
+          target_folder: docs/papyrus
           single_commit: true
