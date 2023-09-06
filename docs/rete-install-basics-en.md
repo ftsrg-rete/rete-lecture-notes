@@ -66,7 +66,7 @@ This created a pair of files in the `.ssh` folder (mind the dot!) of the current
 
 Open the `id_rsa.pub` file using Notepad, and copy the entire contents of the file. 
 
-Next, go to [https://github.com/settings/keys](https://github.com/settings/keys), and click on `New SSH key`. Add a descriptive title for the key, select `Authentication key`, and paste the value of the key from the previious step:
+Next, go to [https://github.com/settings/keys](https://github.com/settings/keys), and click on `New SSH key`. Add a descriptive title for the key, select `Authentication key`, and paste the value of the key from the previous step:
 
 ![](figs/install/2023-09-06-14-36-35.png)
 
