@@ -1,3 +1,11 @@
 nav:
     - index.md
     - rete-install-basics-en.md
+    - ea-guide.md
+    - ea-first-project.md
+    - ea-usecase-and-requirement-guide.md
+    - ea-data-and-interface-modeling-guide.md
+    - ea-composition-modeling-guide.md
+    - ea-structural-modeling-guide.md
+    - ea-behavior-modeling-guide.md
+    
