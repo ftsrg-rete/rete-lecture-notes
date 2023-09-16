@@ -4,7 +4,6 @@ subtitle: System Engineering (BMEVIMIAC01)
 header: System Engineering (BMEVIMIAC01)
 ---
 
-
 # Data and information modeling
 
 ## Download ISO 80000 library

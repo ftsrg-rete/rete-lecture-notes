@@ -8,5 +8,5 @@ nav:
     - composition-modeling-guide.md
     - structural-modeling-guide.md
     - behavior-modeling-guide.md
-    - rete-ftedit.md
+    - ftedit.md
     
