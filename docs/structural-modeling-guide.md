@@ -4,11 +4,12 @@ subtitle: System Engineering (BMEVIMIAC01)
 header: System Engineering (BMEVIMIAC01)
 ---
 
+
 # Model properties and ports
 
 1. Create an IBD of a block, and right click on the diagram and select "*Synchronize Structural Elements*".
 ![Alt text](figs/ea-structure-modeling/image.png) 
-1. In the Interaction Point and Parts/Properties tab of the Features window you can make visible the port and properties of the properties. If you change the name or an attribute of a port or a property, then the type of the containing property will be updated automatically. **Warning: this feature sometimes is a little bit buggy.**
+1. In the Interaction Point and Parts/Properties tab of the Features window you can make visible the port and properties of the properties. If you change the name or an attribute of a port or a property, then the type of the containing property will be updated automatically. **Warning: this feature sometimes is a little bit buggy.** 
 ![Alt text](figs/ea-structure-modeling/image-1.png)
 1. Use the tools in the Layout menu to arrange the properties. The allignment tools and the make all propety same size tools can be specially usefuly. **Warning: small properties will be automatically resized if you close and reopen a diagram, so make all property much bigger than neccessary to prevent this.**  It is also advised to move the label of the ports inside the properties.
 ![Alt text](figs/ea-structure-modeling/image-2.png)
