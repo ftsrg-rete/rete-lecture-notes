@@ -1,4 +1,3 @@
-
 ---
 title: Structural modeling using Enterprise Architect
 subtitle: System Engineering (BMEVIMIAC01)
