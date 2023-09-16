@@ -31,6 +31,45 @@ A glossary can be created multiple ways, this tutorial show the simplest one. In
 ![Alt text](figs/ea-uc-and-req-modeling/image-8.png)
 
 
+## Scenarios of the use cases
+1. If you double-click on any usecase, then the EA will automatically open the "*Scenario Specification*" of the selected use case.
+![](figs/ea-scenarios-and-constraints/image.png)
+1. In the newly opened "*Scenario*" window you can specify the basic path of the use case. You can add steps to the path if you write the name of the step in the "*new step*" field. Additionally, you can specify the used and resulted objects of the step in the "*Uses*" and "*Results*" columns, respectively. You can use the "*State*" column to specify that the step occurs in which state of the system.
+![Alt text](figs/ea-scenarios-and-constraints/image-1.png)
+2. If you select a step, then you can move the step forward and backward using the green arrows in the top menu bar.
+![Alt text](figs/ea-scenarios-and-constraints/image-2.png)
+3. If you select a step, then you can add alternate and exception paths using the yellow and orange path icons in the top menu bar.
+![Alt text](figs/ea-scenarios-and-constraints/image-3.png)
+1. If you create an alternate or exception path then you can add steps to the path in the table. You can select different paths in the "*Enty Points*" tab below the table of steps. If you select a path then you can change the type (basic/alternate/exception) and the name of the path in the "*Type*" and "*Scenario*" fields.
+![Alt text](figs/ea-scenarios-and-constraints/image-4.png)
+1. After you created the paths and steps of the paths,then you can generate anactivity diagram from the scenario definition by clicking to the diagram icon and select "*Activity with ActivityParameter*". This command will automatically create an activity and a UML Activity diagram.   
+![Alt text](figs/ea-scenarios-and-constraints/image-5.png)
+2. In the diagram, each step is an activity action and the in- and output of the actions are activity parameters. The alternate and exception paths are transformed into "*decision*" control nodes. 
+![Alt text](figs/ea-scenarios-and-constraints/image-6.png)
+3. You can visualize the inputs and the outputs of the activities if you select an actions and in "*Interaction Points*" tab of the Features window turn on the visibility of the activity parameters. Thereafter, you can connect the activity parameters with object flow.![Alt text](figs/ea-scenarios-and-constraints/image-7.png)
+4. Alternatively, you can generate a statemachine diagram from the scenarions. In the statemachine diagram, the transitions are generated from the actions and the states of the diagram are defined by the "*State*" column of the scenario table.
+![Alt text](figs/ea-scenarios-and-constraints/image-8.png)
+![Alt text](figs/ea-scenarios-and-constraints/image-9.png)
+
+## Constraints of use cases
+
+1. If you double-click on any usecase, then the EA will automatically open the "*Scenario Specification*" of the selected use case.
+![](figs/ea-scenarios-and-constraints/image.png)
+1. In the "*Constraints*" tab of the "*Scenario*" window you can specify the constraints of the use cases. 
+![Alt text](figs/ea-scenarios-and-constraints/image-10.png)
+1. If you click on the "Add New" icon in the constraints tab you can add a constraint to the use case.
+![Alt text](figs/ea-scenarios-and-constraints/image-11.png)
+1. In the pop-up window you can specify the name of the constraint in the "*Constraint*" field and you can set the type (Invariant/Pre-condision/Post-condition) of the constraint in the "*Properties*" field. Below the name of the constraint you can add some notes to the constraint. You can set the changes by clicking on the "*Save*" button.
+![Alt text](figs/ea-scenarios-and-constraints/image-12.png)
+1. The new constraint will appear in the "*Constraints*" tab. You can edit existing constraints if you double click on the constraint.
+![Alt text](figs/ea-scenarios-and-constraints/image-13.png)
+1. Alternatively, you can add and modify constraints if you right click on a use case and select the "*Properties*" option and in the pop-up window you select the "*Responsibilities/Constraints*" tab.
+![Alt text](figs/ea-scenarios-and-constraints/image-14.png)
+![Alt text](figs/ea-scenarios-and-constraints/image-15.png)
+
+
+
+
 # Requirement modeling
 
 1. Create a requirement diagram. Define some requirements using the Toolbox.
