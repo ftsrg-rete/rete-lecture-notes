@@ -6,7 +6,7 @@ header: System Engineering (BMEVIMIAC01)
 
 # Create a glossary
 
-A glossary can be created multiple ways, this tutorial show the simplest one. In EA the definitions are modeled by classes with *\<\<GlossaryEntry\>\>* stereotype. The name of the class is the defined expression and the note of the class is the definition of the expression. The glossary entries are organized into categories, which are packages with the *\<\<GlossaryCategory\>\>* stereotype. The glossary is an UML class diagram, which is in "*Specification View*".
+A glossary can be created multiple ways, this tutorial show the simplest one. In EA the definitions are modeled by classes with <<*GlossaryEntry*\>\> stereotype. The name of the class is the defined expression and the note of the class is the definition of the expression. The glossary entries are organized into categories, which are packages with the <<*GlossaryCategory*\>\> stereotype. The glossary is an UML class diagram, which is in "*Specification View*".
 
 1. Create a package and select the "*Select and Apply Model Pattern*".
 ![Alt text](figs/ea-uc-and-req-modeling/image.png)

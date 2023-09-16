@@ -1,10 +1,9 @@
-
-
 ---
 title: Data and interface modeling using Enterprise Architect
 subtitle: System Engineering (BMEVIMIAC01)
 header: System Engineering (BMEVIMIAC01)
 ---
+
 
 # Data and information modeling
 
