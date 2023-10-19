@@ -7,6 +7,7 @@ nav:
     - data-and-interface-modeling-guide.md
     - composition-modeling-guide.md
     - structural-modeling-guide.md
+    - allocation-modeling-guide.md
     - behavior-modeling-guide.md
     - safest.md
     - ftedit.md
