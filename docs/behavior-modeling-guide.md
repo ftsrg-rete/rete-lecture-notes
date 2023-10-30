@@ -42,30 +42,30 @@ header: System Engineering (BMEVIMIAC01)
 
 # Sequence modeling
 
-1. You can create a sequence diagram if you right click an element in the "*Browser*" and select add diagram and choose "*SysML::Sequence Diagram*".
+1. You can create a sequence diagram if you right click an element in the "*Browser*" and select add diagram and choose "*Sequence Diagram*".
 ![Alt text](figs/ea-activity-and-seq/image-7.png)
 ![Alt text](figs/ea-activity-and-seq/image-8.png)
-2. You can create new objects with lifelines using by draging "*Sequence*" elements from the "*Toolbox*".
+1. You can create new objects with lifelines using by draging "*Sequence*" elements from the "*Toolbox*".
 ![Alt text](figs/ea-activity-and-seq/image-9.png)
-3. Alternatively, you can drag and drop existing elements from the "*Browser*" into the diagram. The Enterprise Architect will automatically add lifeline to the elements. Moreover you can add properties of the elements to the diagram.
+1. Alternatively, you can drag and drop existing elements from the "*Browser*" into the diagram. The Enterprise Architect will automatically add lifeline to the elements. Moreover you can add properties of the elements to the diagram.
 ![Alt text](figs/ea-activity-and-seq/image-10.png)
-4. Using the "*Toolbox*" you can add messages into the diagram.
+1. Using the "*Toolbox*" you can add messages into the diagram.
 ![Alt text](figs/ea-activity-and-seq/image-11.png)
-5. You can add signals and data objects to the messages if you right click on a message and select the "*Advanced/Information Flows Realized*" command. In the pop-up windows you shall click on "*Create new information flow*" field and select a Class or a Signal.
+1. You can add signals and data objects to the messages if you right click on a message and select the "*Advanced/Information Flows Realized*" command. In the pop-up windows you shall click on "*Create new information flow*" field and select a Class or a Signal.
 ![Alt text](figs/ea-activity-and-seq/image-12.png)
 ![Alt text](figs/ea-activity-and-seq/image-13.png)
 ![Alt text](figs/ea-activity-and-seq/image-14.png)
-6. You can add duration and timing constraints to messages if you right click on a message and select "*Timing Details*". In the pop-up window you can specify the timing related constraints and observations.
+1. You can add duration and timing constraints to messages if you right click on a message and select "*Timing Details*". In the pop-up window you can specify the timing related constraints and observations.
 ![Alt text](figs/ea-activity-and-seq/image-15.png)
 ![Alt text](figs/ea-activity-and-seq/image-16.png)
 ![Alt text](figs/ea-activity-and-seq/image-17.png)
-7. You can set the synchronicity type of a message if you right click on a message and select the "Toogle IsReturn" command.
+1. You can set the synchronicity type of a message if you right click on a message and select the "Toogle IsReturn" command.
 ![Alt text](figs/ea-activity-and-seq/image-18.png)
 ![Alt text](figs/ea-activity-and-seq/image-19.png)
-8. You can modify the lifeline activations if you right click on a message and select the "*Activations/Extend Source Activation*" commands.
+1. You can modify the lifeline activations if you right click on a message and select the "*Activations/Extend Source Activation*" commands.
 ![Alt text](figs/ea-activity-and-seq/image-20.png)
 ![Alt text](figs/ea-activity-and-seq/image-21.png)
-9. You can add fragments using the toolbox.
+1. You can add fragments using the toolbox.
 ![Alt text](image-22.png)
-10. You can add multiple region to a fragment by adding new conditions in the "*Combined fragment*" tab of the "*Properties*" window. 
+1.  You can add multiple region to a fragment by adding new conditions in the "*Combined fragment*" tab of the "*Properties*" window. 
 ![Alt text](figs/ea-activity-and-seq/image-23.png)
