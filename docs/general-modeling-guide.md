@@ -1,5 +1,5 @@
 ---
-title: Általános bevezető az Enterprise Architect használatába
+title: General introduction to modeling in Enterprise Architect
 subtitle: System Engineering (BMEVIMIAC01)
 header: System Engineering (BMEVIMIAC01)
 ---
