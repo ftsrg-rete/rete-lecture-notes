@@ -1,7 +1,7 @@
-# Papyrus Tutorial
+# Enterprise Architect Tutorial
 
-Eclipse Papyrus is an industrial-grade open source Model-Based Engineering tool. Eclipse Papyrus has notably been used successfuly in industrial projects and is the base platform for several industrial modeling tools.
+Enterprise Architect (EA) is an industrial-grade commercial Model-Based Engineering tool. EA has notably been used successfuly in industrial projects and is the base platform for several industrial modeling tools. EA can be effitiently used if the users know both the concepts of model-based system engineering and the practical know-hows of the tool.
 
-Project homepage: [https://www.eclipse.org/papyrus/](https://www.eclipse.org/papyrus/)
+Project homepage: [https://sparxsystems.com/products/ea/](https://sparxsystems.com/products/ea/)
 
-For the tutorial, see links to the left.
+For the tutorial, see links to the left. All tutorials assumes that the EA was set up correctly and the neccessary configuration steps, descibed in the General EA Guide, was executed properly.
