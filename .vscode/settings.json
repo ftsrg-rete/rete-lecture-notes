@@ -1,0 +1,10 @@
+{
+    "pasteImage.basePath": "${projectRoot}/docs/figs",
+    "pasteImage.path": "${projectRoot}/docs/figs",
+    "markdown.editor.drop.copyIntoWorkspace": "never",
+    "markdown.editor.drop.enabled": "never",
+    "markdown.editor.filePaste.copyIntoWorkspace": "never",
+    "markdown.editor.filePaste.enabled": "never",
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": "never",
+    "ipynb.pasteImagesAsAttachments.enabled": false
+}

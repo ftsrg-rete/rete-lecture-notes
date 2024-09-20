@@ -9,12 +9,10 @@ header: System Engineering (BMEVIMIAC01)
 For the successful installation and licensing of Enterprise Architect, SmartGit and LemonTree Desktop, the following files will be necessary:
 
 * `easetupfull_x86.exe`: Enterprise Architect installation file
-* `smartgit-22_1_7-setup.exe`: SmartGit installation file
-* `smartgit.lic`: SmartGit license
+* `smartgit-24_1-preview-13-setup.exe`: SmartGit installation file
 * `LemonTree.msi`: LemonTree Desktop installation file
-* `desktop.lic`: LemonTree Desktop license
 
-Furthermore, the activation codes and license server credentials are also needed for licensing Enterprise Architect.
+Furthermore, the activation codes and license server credentials are also needed for licensing the tools.
 
 # Enterprise Architect
 
@@ -40,43 +38,50 @@ Click `Close`. A new window should appear, prompting for an activation code. Fil
 
 # SmartGit
 
-Launch the installer (Administrator permission are necessary). The default values are suitable as-is.  
+Launch the installer (Administrator permission are necessary). The default values are suitable as-is.
 
-Launch SmartGit, and agree to the license agreement. Check `Register existing license`, and provide the path to the SmartGit license:
+Launch SmartGit, and choose "Standard (workflow oriented)" style. The next window asks for username and email, **use the same as you normally use for Git and GitHub**. Next, agree to the license agreement. Check `Register existing license`, and click on the "Have an on-premise license server?" text:
 
-![](figs/install/2023-09-06-14-25-15.png)
+![alt text](docs/figs/install/image-1.png)
 
-In the pop-up window, click OK. The next window asks for username and email, **use the same as you normally use for Git and GitHub**. In the next window, select `Use SmartGit as SSH client`, then, in the next window, select `Working tree`. Finish the setup by clicking through the rest of the windows.
+Next, provide the address and port (together with the `http://` part) for the license server:
 
-Next, SmartGit should open, prompting for opening a repository:
+![alt text](docs/figs/install/image.png)
 
-![](figs/install/2023-09-06-14-28-46.png)
+In the pop-up window, click OK. Finish the setup by clicking through the rest of the windows.
 
-Choose `Clone existing`, and fill in the repository URL:
+Next, SmartGit should open:
 
-![](figs/install/2023-09-06-14-30-17.png)
+![alt text](docs/figs/install/image-2.png)
 
-Note that the above example uses SSH authentication. To acquire an SSH key, open `cmd` from the start menu, and type `ssh-keygen`. For default values, hit Enter for all questions (in lieu of answers):
+Next, click `Edit`/`Preferences`:
 
-![](figs/install/2023-09-06-14-32-55.png)
+![alt text](docs/figs/install/image-3.png)
 
-This created a pair of files in the `.ssh` folder (mind the dot!) of the current user's directory:
+Choose `Add`/`GitHub`, and decide which option is best for you (for personal computers, the latter is easier and safe enough):
 
-![](figs/install/2023-09-06-14-34-09.png)
+![alt text](docs/figs/install/image-4.png)
 
-Open the `id_rsa.pub` file using Notepad, and copy the entire contents of the file. 
+In the following screen, click `Generate token`:
 
-Next, go to [https://github.com/settings/keys](https://github.com/settings/keys), and click on `New SSH key`. Add a descriptive title for the key, select `Authentication key`, and paste the value of the key from the previious step:
+![alt text](docs/figs/install/image-5.png)
 
-![](figs/install/2023-09-06-14-36-35.png)
+This should open a browser. Log in to GitHub on the opened webpage. After a successful login, the following page should appear in the browser:
 
-Go back to SmartGit, which should prompt you to select a private key file. Browse to the `.ssh/id_rsa` file (_without_ the `.pub` extension), and leave the passphrase empty (if you opted for a password in the `ssh-keygen` part, enter that passphrase):
+![alt text](docs/figs/install/image-6.png)
 
-![](figs/install/2023-09-06-14-38-30.png)
+In the meantime, SmartGit should have populated the token textbox. Without modifying it, click `Add`.
 
-Click `Accept` on the server certificate. Next, leave the default options about cloning preferences, then on the next window, choose the target folder of the repository. Click `Next/OK` a few times, and the main window should open:
+![alt text](docs/figs/install/image-7.png)
 
-![](figs/install/2023-09-06-14-41-46.png)
+On the main page, click `Clone`, and search for the desired repository to clone:
+
+![alt text](docs/figs/install/image-8.png)
+
+After some dialog windows (where default options are OK), this should start the cloning process:
+
+![alt text](docs/figs/install/image-9.png)
+
 
 Close SmartGit for now.
 
@@ -88,20 +93,20 @@ Launch the LemonTree installer, and click through the installer. Make sure that 
 
 All other options are suitable as-is. 
 
-After finishing the installation, launch LemonTree. In the pop-up windows (or through the top-left menu, Help, License), choose `Apply New License`:
+After finishing the installation, launch LemonTree. In the pop-up windows (or through the top-left menu, Help, License), choose `Apply New License`, and `Floating license from URL`:
 
-![](figs/install/2023-09-06-14-51-47.png)
+![alt text](docs/figs/install/image-10.png)
 
-Choose the license file, then click `Apply`. Close LemonTree for now. 
+Write in the license server information, then click `Apply`. Close LemonTree for now. 
 
 
 # Testing the Software
 
-Open SmartGit, and clone the tutorial homework assignment repository. The following window should open:
+Open SmartGit, and clone the tutorial homework assignment repository (if you haven't already). Click on `Local files` on the top left, and right-click the root folder, and open it in Explorer:
 
-![](figs/install/2023-09-06-14-54-55.png)
+![alt text](docs/figs/install/image-11.png)
 
-Open the folder in Explorer, and check if the files were successfully cloned:
+Check if the files were successfully cloned:
 
 ![](figs/install/2023-09-06-14-56-27.png)
 
@@ -146,11 +151,9 @@ This window summarizes the changes of the uncommited file. There are four differ
 ![](figs/install/2023-09-06-15-11-29.png)
 
 
-Inspect the changes, and close LemonTree. In SmartGit, click on `Commit`, and a window should appear that shows `model.qeax` has changed:
+Inspect the changes, and close LemonTree. In SmartGit (still in the "Local files" view), click on `Stage` when the changed file is selected, then on the right, provide a descriptive (!) commit message, and click `Commit`. Then click on `Push`. (Or select `Commit and Push`):
 
-![](figs/install/2023-09-06-15-06-18.png)
-
-Add a descriptive (!) commit message, and click `Commit`. Then click on `Push`. (Or select `Commit and Push`).
+![alt text](docs/figs/install/image-12.png)
 
 ## Task 2
 
