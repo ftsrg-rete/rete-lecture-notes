@@ -216,11 +216,7 @@ After LemonTree opens, instead of 2, now there are 3 columns in the right partit
 
 ![](figs/install/2023-09-06-15-43-40.png)
 
-To accept "their" modification, click on the "Take" button. Then click on the "Merge and exit lemon tree" button above, which will open a new popup:
-
-![](figs/install/2023-09-06-15-45-44.png)
-
-In SmartGit, click on `Mark resolved`:
+To accept "their" modification, click on the "Take" button. Then click on the "Merge and exit lemon tree" button above. In SmartGit, click on `Mark resolved`:
 
 ![](figs/install/2023-09-06-15-46-22.png)
 
