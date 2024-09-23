@@ -40,7 +40,7 @@ Click `Close`. A new window should appear, prompting for an activation code. Fil
 
 Launch the installer (Administrator permission are necessary). The default values are suitable as-is.
 
-Launch SmartGit, and choose "Standard (workflow oriented)" style. The next window asks for username and email, **use the same as you normally use for Git and GitHub**. Next, agree to the license agreement. Check `Register existing license`, and click on the "Have an on-premise license server?" text:
+Launch SmartGit, and choose "Standard (workflow oriented)" style. The next window asks for username and email, **use the same as you normally use for Git and GitHub**. Next, agree to the license agreement. Check `Register existing license`, and click on the "Have an on-premise license server?" text in the bottom right corner:
 
 ![alt text](docs/figs/install/image-1.png)
 
@@ -202,11 +202,15 @@ On the first PR, the following message forbids merging now:
 
 ![](figs/install/2023-09-06-15-37-26.png)
 
-Open SmartGit, checkout `main` (double-click on the bottom left), then click `Pull` to pull the changes. Checkout the first feature branch, then select `main` and click merge on the right-click (context) menu. A prompt should appear, choose `merge`, which should prompt with a warning that there is a merge issue:
+Open SmartGit, checkout `main` (double-click on the bottom left), then click `Pull` to pull the changes. Checkout the first feature branch, then select `main` and click merge on the right-click (context) menu. A prompt should appear asking how the merge should be performed:
 
-![](figs/install/2023-09-06-15-40-55.png)
+![](figs/install/how_to_merge_popup.png)
 
-Click `Close` on this popup, then double-click the conflicting `model.qeax` to open in LemonTree.
+Choose `Create Merge Commit`. As there is a conflict, the merge commit cannot be created automatically, so choosing `Create Merge-Commit` and `Merge to Working tree` will both result in entering the merging state:
+
+![](figs/install/merging_state.png)
+
+Double-click the conflicting `model.qeax` to open in LemonTree.
 
 After LemonTree opens, instead of 2, now there are 3 columns in the right partition: "ours", "theirs", and "target". We can see the current (first) feature branch's modifications in the "ours" column, the second feature branch's modifications in the "theirs" column, and the desired outcome in the "target" column. Open down the hierarchy on the top right:
 
