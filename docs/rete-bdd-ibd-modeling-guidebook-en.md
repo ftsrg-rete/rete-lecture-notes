@@ -1,7 +1,7 @@
 ---
 title: BDD and IBD modeling Papyrus guidebook 
-subtitle: Systems Engineering (BMEVIMIAC01)
-header: Systems Engineering (BMEVIMIAC01)
+subtitle: Systems Engineering (VIMIAD03)
+header: Systems Engineering (VIMIAD03)
 ---
 
 # Block Definition Diagram

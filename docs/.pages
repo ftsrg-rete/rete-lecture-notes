@@ -1,14 +1,18 @@
 nav:
     - index.md
-    - rete-install-basics-en.md
-    - general-modeling-guide.md
-    - first-project.md
-    - usecase-and-requirement-guide.md
-    - data-and-interface-modeling-guide.md
-    - composition-modeling-guide.md
-    - structural-modeling-guide.md
-    - allocation-modeling-guide.md
-    - behavior-modeling-guide.md
-    - safest.md
-    - ftedit.md
+    - 'Installation & Basics':
+        - rete-install-basics-en.md
+    - 'Modeling Guides':
+        - general-modeling-guide.md
+        - first-project.md
+        - usecase-and-requirement-guide.md
+        - data-and-interface-modeling-guide.md
+        - composition-modeling-guide.md
+        - structural-modeling-guide.md
+        - allocation-modeling-guide.md
+        - behavior-modeling-guide.md
+        - safest.md
+        - ftedit.md
+    - 'Laboratory Exercises':
+        - lab1.md
     

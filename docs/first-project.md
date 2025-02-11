@@ -1,7 +1,7 @@
 ---
 title: First steps using Enterprise Architect
-subtitle: System Engineering (BMEVIMIAC01)
-header: System Engineering (BMEVIMIAC01)
+subtitle: System Modeling (VIMIAD03)
+header: System Modeling (VIMIAD03)
 ---
 
 # Create project

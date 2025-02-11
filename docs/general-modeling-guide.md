@@ -1,7 +1,7 @@
 ---
 title: General introduction to modeling in Enterprise Architect
-subtitle: System Engineering (BMEVIMIAC01)
-header: System Engineering (BMEVIMIAC01)
+subtitle: System Modeling (VIMIAD03)
+header: System Modeling (VIMIAD03)
 ---
 
 
@@ -10,7 +10,7 @@ header: System Engineering (BMEVIMIAC01)
 ## Template package beállítása
 OK: A SysML diagrammokon alapértelmezetten minden compartment engedélyezve van. Ez azért egy hatalmas probléma mert ha készítesz egy tökéletes diagrammot és később a diagrammokon lévő elemeknek új property-jei lesznek akkor azok alapértelmezetten megjelennek a compartment-ben és az összes elem átméreteződik. A compartment-eket csak egy speciálisan elkészített tamplate package-dzsel lehet megakadályozni, amit előre kidolgoztam.
 
-1.	A Publish fülön válaszd ki az Import-nél az alábbi linkről letőltött XMI File…-t ([link](https://bmeedu.sharepoint.com/:u:/s/Section_BMEVIMIAC01-HU-2023-24-1/ESqUBbjDuFxAt-oLA89inj4B4mVZaSnQ7qFGvhhHyuIF2Q?e=K4sEj7)).
+1.	A Publish fülön válaszd ki az Import-nél az alábbi linkről letőltött XMI File…-t ([link](https://bmeedu.sharepoint.com/:u:/s/Section_VIMIAD03-HU-2023-24-1/ESqUBbjDuFxAt-oLA89inj4B4mVZaSnQ7qFGvhhHyuIF2Q?e=K4sEj7)).
 ![Alt text](figs/ea-guide-tmp-pkg-crt-1.png)
 2.	A felugró ablakban válaszd ki a kiexportált template package-ta Filename mezőben és nyomd meg az import-ot. Az import során felugrik egy ablak ahol Yes-t kell választani.
  ![Alt text](figs/ea-guide-tmp-pkg-crt-2.png)

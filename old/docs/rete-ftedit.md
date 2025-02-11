@@ -1,7 +1,7 @@
 ---
 title: FTEdit - Fault Tree Editing tool 
-subtitle: System Engineering (BMEVIMIAC01)
-header: System Engineering (BMEVIMIAC01)
+subtitle: System Modeling (VIMIAD03)
+header: System Modeling (VIMIAD03)
 ---
 
 # Introduction
