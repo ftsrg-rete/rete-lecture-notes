@@ -10,6 +10,14 @@ _The initial model in this repository comes from the [ESPD-EDM](https://github.c
 
 To download the initial model, click [here](assets/espd.qeax).
 
+This laboratory exercise assumes pairs of people working together. Some steps refer to **Person A** or **Person B**. Ensure you agree on which one *you* are!
+
+## Setup
+
+**Person A**: Create a private repository on GitHub. Invite **Person B** as a collaborator. Add the linked model file (`espd.qeax`) to the repository, either via the web interface, or SmartGit.
+
+**Both people**: clone the repository in SmartGit. Ensure you both can open the model file using Enterprise Architect.
+
 ## Introduction
 
 The *European Single Procurement Document* (ESPD) is a mandatory electronic form, in two parts, used by buyers to assess the suitability of suppliers tendering in a public procurement procedure. The [model](model.qeax) provided here showcases the ESPD Exchange Data Model (ESPD-EDM) to help member states and commercial entities create an ESPD service. 
