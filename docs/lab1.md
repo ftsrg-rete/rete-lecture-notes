@@ -34,6 +34,7 @@ Also try and include some descriptions on what each diagram represents. The reso
 Next, locate `cac::QualificationApplicationRequest` either in the model hierarchy or on one of the diagrams. We want to change this element so that `issuetime` is not optional, and `previousversionid` may contain any number of entries. We also want to add a child class,`cac::SpecialQualificationApplicationRequest`, inheriting from this base, to allow specialization later on.
 
 **DO**: 
+
 1. **Person A only**: Change the multiplicities of these attributes to the desired values outlined above, create the child class on the diagram where `QualificationApplicationRequest` was found, and open a PR from a feature branch towards `main`. Do not yet merge. 
 1. **Person B only**: Change the multiplicity of `issuetime` to `2..2`, and open a PR from a feature branch towards `main`. Do not yet merge.
 1. **Both people**: Inspect each other's pull requests. 
@@ -46,6 +47,7 @@ Next, locate `cac::QualificationApplicationRequest` either in the model hierarch
 In this step, we will resolve the merge conflict in the other pull request, using SmartGit/LemonTree. When ready, we will merge the PR.  
 
 **DO**: 
+
 1. Open SmartGit, checkout `main` (double-click) then click `Pull` to pull the changes.
 1. Checkout the source branch of the PR, then select `main` and click merge in the right-click (context) menu. A prompt should appear asking how the merge should be performed. Choose `Create Merge-Commit`. This will open the merge window, where conflicts have to be dealt with.
 1. Double-click the conflicting `model.qeax` to open in LemonTree.
