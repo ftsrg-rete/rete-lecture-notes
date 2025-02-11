@@ -21,7 +21,7 @@ This laboratory exercise assumes pairs of people working together. Some steps re
 
 ## Introduction
 
-The *European Single Procurement Document* (ESPD) is a mandatory electronic form, in two parts, used by buyers to assess the suitability of suppliers tendering in a public procurement procedure. The [model](model.qeax) provided here showcases the ESPD Exchange Data Model (ESPD-EDM) to help member states and commercial entities create an ESPD service. 
+The *European Single Procurement Document* (ESPD) is a mandatory electronic form, in two parts, used by buyers to assess the suitability of suppliers tendering in a public procurement procedure. The [model](espd.qeax) provided here showcases the ESPD Exchange Data Model (ESPD-EDM) to help member states and commercial entities create an ESPD service. 
 
 Your tasks during this exercise will cover the following:
 
@@ -48,7 +48,7 @@ Next, locate `cac::QualificationApplicationRequest` either in the model hierarch
 
 1. **Person A only**: Change the multiplicities of these attributes to the desired values outlined above, create the child class on the diagram where `QualificationApplicationRequest` was found, and open a PR from a feature branch towards `main`. Do not yet merge. 
 1. **Person B only**: Change the multiplicity of `issuetime` to `2..2`, and open a PR from a feature branch towards `main`. Do not yet merge.
-1. **Both people**: Inspect each other's pull requests. 
+1. **Both people**: Inspect each other's pull requests, both on GitHub and in LemonTree (double click the file in SmartGit!)
 1. **Person A only**: Merge **your partner's** pull request. Do not update your own.
 
 > This type of merge is called a _2-way merge_, because we merge two branches that have not diverged. Therefore, there cannot be any merge conflicts, every change is present on the same (feature branch). This means the model file (which is not a text file) is just overwritten by the version from the feature branch. Had the two branches diverged, this would be a _3-way merge_, and `git` alone could not solve the merge conflicts within this non-text file.
@@ -61,7 +61,7 @@ In this step, we will resolve the merge conflict in the other pull request, usin
 
 1. Open SmartGit, checkout `main` (double-click) then click `Pull` to pull the changes.
 1. Checkout the source branch of the PR, then select `main` and click merge in the right-click (context) menu. A prompt should appear asking how the merge should be performed. Choose `Create Merge-Commit`. This will open the merge window, where conflicts have to be dealt with.
-1. Double-click the conflicting `model.qeax` to open in LemonTree.
+1. Double-click the conflicting `espd.qeax` to open in LemonTree.
 1. After LemonTree opens, there are 3 columns in the right partition: "ours", "theirs", and "target". We can see the current feature branch's modifications in the "ours" column, the second feature branch's modifications in the "theirs" column, and the desired outcome in the "target" column. Pick the model elements to keep -- remember the goal of the previous step.
 1. Push your local changes to GitHub, and merge the PR.
 
