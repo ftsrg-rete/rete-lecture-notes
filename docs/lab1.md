@@ -40,6 +40,8 @@ Also try and include some descriptions on what each diagram represents. The reso
 
 ## Model Change and 2-Way Merge
 
+Open `espd.qeax` in Enterprise Architect if you haven't done so already.
+
 Next, locate `cac::QualificationApplicationRequest` either in the model hierarchy or on one of the diagrams. We want to change this element so that `issuetime` is not optional, and `previousversionid` may contain any number of entries. We also want to add a child class,`cac::SpecialQualificationApplicationRequest`, inheriting from this base, to allow specialization later on.
 
 **DO**: 
