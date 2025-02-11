@@ -12,6 +12,7 @@ To download the initial model, click [here](assets/espd.qeax).
 
 This laboratory exercise assumes pairs of people working together. Some steps refer to **Person A** or **Person B**. Ensure you agree on which one *you* are!
 
+
 ## Setup
 
 **Person A**: Create a private repository on GitHub. Invite **Person B** as a collaborator. Add the linked model file (`espd.qeax`) to the repository, either via the web interface, or SmartGit.
