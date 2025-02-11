@@ -27,8 +27,6 @@ Throughout this subject, we will primarily grade **documentation**, never the mo
 
 **DO:** Create a new file in the repository, called `Documentation.md`. Using [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), include diagram renders in the document using the [image](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) syntax. You may exclude diagrams that have no meaning (such as the LostAndFound diagram).
 
-> You won't be able to add this file directly, as the `main` branch is protected. Create a feature branch (**from `main`**) for the documentation, add the `documentation` label to it, and when it's ready, merge it.
-
 Also try and include some descriptions on what each diagram represents. The resources linked at the top of this file can help you determine their purpose. Do not overdo this step, a few sentences are more than enough.
 
 ## Model Change and 2-Way Merge
