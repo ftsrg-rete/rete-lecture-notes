@@ -1,8 +1,8 @@
 nav:
-    - index.md
     - 'Installation & Basics':
         - rete-install-basics-en.md
     - 'Modeling Guides':
+        - index.md
         - general-modeling-guide.md
         - first-project.md
         - usecase-and-requirement-guide.md
