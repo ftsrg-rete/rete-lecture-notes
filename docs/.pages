@@ -13,6 +13,7 @@ nav:
         - behavior-modeling-guide.md
         - safest.md
         - ftedit.md
+        - SmartGit.md
     - 'Laboratory Exercises':
         - lab1.md
     
